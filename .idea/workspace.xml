@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70aa1f19-7d6c-4411-8643-708e0971635b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/api/routes/web.php" afterDir="false" />
-    </list>
+    <list default="true" id="70aa1f19-7d6c-4411-8643-708e0971635b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +15,7 @@
     <session id="-1607333344">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -1447,8 +1444,7 @@
     <option name="totallyTimeSpent" value="2613000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24281392" />

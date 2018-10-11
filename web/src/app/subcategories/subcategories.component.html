@@ -1,0 +1,7 @@
+
+  <h2>{{title}}</h2>
+  <div *ngFor="let subcategoria of subcategories">
+        <h3 [routerLink]="['/productes/',title, subcategoria.name]">{{subcategoria.name}}</h3>
+        <p>{{subcategoria.description}}</p>
+  </div>
+

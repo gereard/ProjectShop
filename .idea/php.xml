@@ -74,6 +74,8 @@
       <path value="$PROJECT_DIR$/api/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/api/vendor/psr/container" />
       <path value="$PROJECT_DIR$/api/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/api/vendor/barryvdh/laravel-cors" />
+      <path value="$PROJECT_DIR$/api/vendor/asm89/stack-cors" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

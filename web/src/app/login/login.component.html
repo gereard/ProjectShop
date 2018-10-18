@@ -1,25 +1,45 @@
 
-<html lang="en">
-    <head></head>
-    
-
-
-  <body class="text-center">
-    <form class="form-signin">
-
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
+<div class="caja-login sombra-suave">
+       <ul class="nav nav-tabs ancho-completo" role="tablist">
+           <li class="nav-item">
+               <a id="tab-login" class="nav-link active"  data-toggle="tab" aria-expanded="false" (click)="changeLogin()">Entrar</a>
+            </li>
+            <li class="nav-item">
+            <a id="tab-sign" class="nav-link"  data-toggle="tab" aria-expanded="true" (click)="changeSignIn()">Nou client</a></li></ul>
+   <!--LOGIN-->
+    <form *ngIf="signing" class="form-login" id="form-login">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Correu electrònic</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="email">
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Contrasenya</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Recorda'm</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>    
     </form>
-  </body>
-</html>
+    <!--REGISTRE-->
+     <form *ngIf="!signing" class="form-registre" id="form-registre">
+         <p><span>Els camps marcats amb * son obligatoris.</span></p>
+      <div class="form-group">
+        <label for="exampleInputEmail2">Correu electrònic*</label>
+        <input type="email" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder="email">
+      </div>
+      <div class="form-group">
+        <label for="nom">Nom*</label>
+        <input type="name" class="form-control" id="nom" aria-describedby="nameHelp" placeholder="Nom complert">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword2">Contrasenya*</label>
+        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-primary">Crear el comte</button>    
+    </form>
+     
+     
+</div>
 

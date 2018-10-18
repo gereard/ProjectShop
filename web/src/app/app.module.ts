@@ -7,6 +7,11 @@ import { HeaderComponent } from './header/header.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './footer/footer.component';
+import { CategoriaComponent } from './categoria/categoria.component';
+import {HttpClientModule} from "@angular/common/http";
+import {HttpModule} from "@angular/http";
+import { SubcategoriesComponent } from './subcategories/subcategories.component';
+import { ProductesComponent } from './productes/productes.component';
 
 @NgModule({
   declarations: [
@@ -15,10 +20,14 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     ProfileComponent,
     FooterComponent,
+    CategoriaComponent,
+    SubcategoriesComponent,
+    ProductesComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

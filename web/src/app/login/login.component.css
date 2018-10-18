@@ -1,0 +1,70 @@
+
+.nav-tabs .nav-item.open .nav-link, .nav-tabs .nav-link.active, .nav-tabs .nav-link.active:hover, .nav-tabs .nav-link:hover {
+    margin-bottom: -.07143rem;
+    background: #fff;
+    color: #444;
+    border-top: 3px solid #4d94ff;
+    border-radius: 0px;
+}
+
+.nav-tabs .nav-item.open .nav-link, .nav-tabs .nav-link, .nav-tabs .nav-link, .nav-tabs .nav-link {
+    margin-bottom: -.07143rem;
+    background: #EBECED;
+    color: #444;
+    border-top: 4px solid #CCCCCC;
+    border-radius: 0px;
+}
+.caja-login {
+    margin-bottom: 25px;
+    margin-bottom: 25px;
+    width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+}
+.sombra-suave {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+}
+.nav-tabs.ancho-completo {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-bottom: none;
+}
+.nav-tabs {
+    border-bottom: 3px solid #f2f2f2;
+}
+.nav-tabs.ancho-completo .nav-link.active, .nav-tabs.ancho-completo .nav-link.active:focus {
+    border-top: 4px solid #4d94ff;
+    border-bottom: 2px solid #fff;
+    border-left: none;
+    border-right: none;
+    background-color: #fff;
+}
+
+.nav-tabs.ancho-completo .nav-item {
+    display: table-cell;
+    float: none;
+    width: 50%;
+    text-align: center;
+}
+
+.form-login{
+    padding: 50px;
+}
+.form-registre{
+    padding: 50px;
+}
+.btn-primary{
+    display:block;
+  margin-left: auto;
+  margin-right: auto;
+    background-color: #4d94ff;
+}
+
+.form-login{
+    display: block;
+}
+.form-registre{
+    display: block;
+}

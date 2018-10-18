@@ -3,53 +3,70 @@
   
   HEctor
 
- 
-</p>
-<!------ Include the above in your HEAD tag ---------->
-
-<nav class="navbar navbar-default" role="navigation">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
+<header class="c-main-header">
+<div class="c-main-header__col">
+    <button class="c-main-header__trigger qa-menu-button mkt-trigger-menu" >    <i class="glyphicon glyphicon-menu-hamburger"></i>
     </button>
-    <a class="navbar-brand" href="#">Brand</a>
-    <i class="c-icon c-icon--primary c-icon--main-menu"></i>
-  </div>
+</div>
 
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Link</a></li>
-      <li><a href="#">Link</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-          <li class="divider"></li>
-          <li><a href="#">One more separated link</a></li>
-        </ul>
-      </li>
-    </ul>
-    <div class="col-sm-3 col-md-3">
-        <form class="navbar-form" role="search">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" name="q">
-            <div class="input-group-btn">
-                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-            </div>
+<div class="js-header-sep c-main-header__hor-sep"></div>
+
+<div class="c-main-header__col c-main-header__col--end">
+    <div class="c-search">
+        <div class="c-search__trigger js-search-trigger">
+            <i class="c-icon c-icon--bold">&nbsp;</i>
         </div>
-        </form>
+    <form class="c-search__form js-search-form" method="GET" action="https://www.pccomponentes.com/buscar/">
+        <input type="text" id="query" name="query" required="required" class="c-search__query qa-search-box mkt-search-query form-control" placeholder="Busca en PcUvic..." data- autocomplete="off">
+    </form>
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li> <a routerLink="/login">Login</a></li>
-    </ul>
-  </div><!-- /.navbar-collapse -->
-</nav>
+<ul class="c-user-menu js-user-menu"> 
+    <li class="c-user-menu__item c-user-menu__item--user-premium">
+        <div class="c-user-menu__link">
+            <span class="u-visible@lg">
+                <b class="c-user-menu__line ">
+                    Fes-te<br><span class="c-user-menu__line__emphasis">Premium▾</span>
+                </b>
+        </span>
+
+        <img class="c-user-menu__link__img-icon" src="//cdn.pccomponentes.com/prod/v1/img/landing/tarifa-premium/svg/icon.svg" alt="">
+        <span class="c-user-menu__link__drop">
+            <div class="c-user-menu__link__drop__premium">
+                <div class="c-user-menu__link__drop__premium__inner">
+                    <img class="c-user-menu__link__drop__premium__inner__img" src="//cdn.pccomponentes.com/prod/v1/img/landing/tarifa-premium/svg/label-logo_02.svg" title="pccomponentes premium" alt="pccomponentes premium">
+                <div class="c-user-menu__link__drop__premium__inner__title">Nos lo estabas pidiendo...</div>
+                    <div class="c-user-menu__link__drop__premium__inner__sub-title">¡Tarifa plana de envíos<br> <span>y mucho más!</span></div>
+                <a class="c-user-menu__link__drop__premium__inner__btn" href="/premium" >FES-TE PREMIUM</a>
+                <a class="c-user-menu__link__drop__premium__inner__over__link" href="/premium" rel="nofollow"></a>
+                </div>
+            </div>
+        </span>
+        </div>
+    </li>
+
+    <li class="c-user-menu__item">
+        <a class="c-user-menu__link qa-user-login-button" href="/login" rel="nofollow">
+        <span class="u-visible@lg">
+            <b class="c-user-menu__line">Entra <br> o regístrate</b>
+        </span>
+            <i class="glyphicon glyphicon-user" ></i>
+        </a>
+    </li>
+    <li class="c-user-menu__item">
+            <a class="c-user-menu__link js-user-cart js-user-menu-link qa-cart-button" href="/cart/" rel="nofollow">
+            <span class="u-visible@lg">
+                <b class="c-user-menu__line">Meu <br> Carro</b>
+            </span>
+                <i class="glyphicon glyphicon-shopping-cart"></i>
+                <div id="idCart" style="display:none">pcc895bbccbc5b7de25.01965953</div>
+            <span class="c-units js-units">0</span>
+            </a>
+        <ul id="pccom-basket" class="p-a-1 sub-menu m-b-1">
+            <li>
+                <p>0 articles afegits</p>
+            </li>
+        </ul>
+    </li>
+</ul>
+</div>
+</header>

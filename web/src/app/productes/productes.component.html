@@ -1,3 +1,6 @@
-<p>
-  productes works!
-</p>
+<div  *ngFor="let producte of productes">
+  <h4 [routerLink]="['/producte/',producte.name]">{{producte.name}}</h4>
+  <p>{{producte.description}}</p>
+  <h5>{{producte.price}}</h5>
+  <h5 *ngIf="producte.discount > 0">{{producte.price  - producte.price * producte.discount/100}}</h5>
+</div>

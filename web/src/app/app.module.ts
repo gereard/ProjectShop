@@ -12,6 +12,12 @@ import {HttpClientModule} from "@angular/common/http";
 import {HttpModule} from "@angular/http";
 import { SubcategoriesComponent } from './subcategories/subcategories.component';
 import { ProductesComponent } from './productes/productes.component';
+import {FormsModule} from "@angular/forms";
+import { ProducteDetallComponent } from './producte-detall/producte-detall.component';
+import { CarritoComponent } from './carrito/carrito.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { CategoriesAdminComponent } from './categories-admin/categories-admin.component';
+
 
 @NgModule({
   declarations: [
@@ -23,11 +29,16 @@ import { ProductesComponent } from './productes/productes.component';
     CategoriaComponent,
     SubcategoriesComponent,
     ProductesComponent,
+    ProducteDetallComponent,
+    CarritoComponent,
+    CheckoutComponent,
+    CategoriesAdminComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

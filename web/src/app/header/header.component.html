@@ -1,47 +1,41 @@
+    <header class="c-main-header">
+        <div class="c-main-header__col">
+            <button class="c-main-header__trigger qa-menu-button mkt-trigger-menu" >    <i class="glyphicon glyphicon-menu-hamburger"></i></button>
+            <nav class="navbar navbar-default" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
 
-<p>
-  header works!aaaaaaaaaaaasdasdasd
-  
-  HEctor
+                    </button>
+                </div>
 
-<header class="c-main-header">
-<div class="c-main-header__col">
-    <button class="c-main-header__trigger qa-menu-button mkt-trigger-menu" >    <i class="glyphicon glyphicon-menu-hamburger"></i></button>
-<nav class="navbar navbar-default" role="navigation">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
+                <div class="js-header-sep c-main-header__hor-sep"></div>
 
-    </button>
-</div>
+                <div class="c-main-header__col c-main-header__col--end">
+                    <div class="c-search">
+                        <div class="c-search__trigger js-search-trigger">
+                            <i class="c-icon c-icon--bold">&nbsp;</i>
+                        </div>
+                        <form class="c-search__form js-search-form" method="GET" action="https://www.pccomponentes.com/buscar/">
+                            <input type="text" id="query" name="query" required="required" class="c-search__query qa-search-box mkt-search-query form-control" placeholder="Busca en PcUvic..." data- autocomplete="off">
+                        </form>
+                    </div>
 
-<div class="js-header-sep c-main-header__hor-sep"></div>
-
-<div class="c-main-header__col c-main-header__col--end">
-    <div class="c-search">
-        <div class="c-search__trigger js-search-trigger">
-            <i class="c-icon c-icon--bold">&nbsp;</i>
-        </div>
-    <form class="c-search__form js-search-form" method="GET" action="https://www.pccomponentes.com/buscar/">
-        <input type="text" id="query" name="query" required="required" class="c-search__query qa-search-box mkt-search-query form-control" placeholder="Busca en PcUvic..." data- autocomplete="off">
-    </form>
-    </div>
-
-<ul class="c-user-menu js-user-menu"> 
-    <li class="c-user-menu__item c-user-menu__item--user-premium">
-        <div class="c-user-menu__link">
+                    <ul class="c-user-menu js-user-menu">
+                        <li class="c-user-menu__item c-user-menu__item--user-premium">
+                            <div class="c-user-menu__link">
             <span class="u-visible@lg">
                 <b class="c-user-menu__line ">
                     Fes-te<br><span class="c-user-menu__line__emphasis">Premium▾</span>
                 </b>
         </span>
 
-        <img class="c-user-menu__link__img-icon" src="//cdn.pccomponentes.com/prod/v1/img/landing/tarifa-premium/svg/icon.svg" alt="">
-        <span class="c-user-menu__link__drop">
+                                <img class="c-user-menu__link__img-icon" src="//cdn.pccomponentes.com/prod/v1/img/landing/tarifa-premium/svg/icon.svg" alt="">
+                                <span class="c-user-menu__link__drop">
             <div class="c-user-menu__link__drop__premium">
                 <div class="c-user-menu__link__drop__premium__inner">
                     <img class="c-user-menu__link__drop__premium__inner__img" src="//cdn.pccomponentes.com/prod/v1/img/landing/tarifa-premium/svg/label-logo_02.svg" title="pccomponentes premium" alt="pccomponentes premium">
@@ -52,45 +46,44 @@
                 </div>
             </div>
         </span>
-        </div>
-    </li>
+                            </div>
+                        </li>
 
-    <li class="c-user-menu__item">
-        <a class="c-user-menu__link qa-user-login-button" href="/login" rel="nofollow">
+                        <li class="c-user-menu__item">
+                            <a class="c-user-menu__link qa-user-login-button" href="/login" rel="nofollow">
         <span class="u-visible@lg">
             <b class="c-user-menu__line">Entra <br> o regístrate</b>
         </span>
-            <i class="glyphicon glyphicon-user" ></i>
-        </a>
-    </li>
-    <li class="c-user-menu__item">
-            <a class="c-user-menu__link js-user-cart js-user-menu-link qa-cart-button" href="/cart/" rel="nofollow">
+                                <i class="glyphicon glyphicon-user" ></i>
+                            </a>
+                        </li>
+                        <li class="c-user-menu__item">
+                            <a class="c-user-menu__link js-user-cart js-user-menu-link qa-cart-button" href="/cart/" rel="nofollow">
             <span class="u-visible@lg">
                 <b class="c-user-menu__line">Meu <br> Carro</b>
             </span>
-                <i class="glyphicon glyphicon-shopping-cart"></i>
-                <div id="idCart" style="display:none">pcc895bbccbc5b7de25.01965953</div>
-            <span class="c-units js-units">0</span>
-            </a>
-        <ul id="pccom-basket" class="p-a-1 sub-menu m-b-1">
-            <li>
-                <p>0 articles afegits</p>
-            </li>
-        </ul>
-    </li>
+                                <i class="glyphicon glyphicon-shopping-cart"></i>
+                                <div id="idCart" style="display:none">pcc895bbccbc5b7de25.01965953</div>
+                                <span class="c-units js-units">0</span>
+                            </a>
+                            <ul id="pccom-basket" class="p-a-1 sub-menu m-b-1">
+                                <li>
+<p>0 articles afegits</p>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 
 
-    <ul class="nav navbar-nav navbar-right">
-      <li> <a routerLink="/login">Login</a></li>
-      <li> <a routerLink="/categories">Categoria</a></li>
-    </ul>
- 
+<ul class="nav navbar-nav navbar-right">
+    <li> <a routerLink="/login">Login</a></li>
+    <li> <a routerLink="/categories">Categoria</a></li>
+    <li> <a routerLink="/cart"> <i class="fas fa-shopping-cart"></i></a></li>
+</ul>
+
 </nav>
-    
-    
-    </div>
+
+
+</div>
 </header>
-
-

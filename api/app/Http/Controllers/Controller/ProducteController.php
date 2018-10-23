@@ -12,14 +12,11 @@ class ProducteController extends Controller
 {
 
 
-    public function index(string $categoria,string $subcategoria)
+    public function index($categoria, $subcategoria)
     {
-
-
-        Producte::join('categoria', 'product.idCategoryx', '=', 'categoria.id')
+        return Producte::join('categoria', 'product.idCategory', '=', 'categoria.id')
             ->join('subcategoria', 'product.idSubcategoria', '=', 'subcategoria.id')
-            ->where('categoria.name','=',(string)$categoria)->where('subcategoria.name','=',(string)$subcategoria);
-
+            ->where('categoria.name','=',$categoria)->where('subcategoria.name','=',$subcategoria)->get(['product.*']);
     }
 
     /**
@@ -51,8 +48,36 @@ class ProducteController extends Controller
      */
     public function show($name)
     {
-     //   return Categoria::where('name','=',$name)->with('subcategories')->get();
+
+        return Producte::where('name','=',$name)->get();
     }
+
+    public function cartProducts(Request $request)
+    {
+
+        $idProducts =  $request->all();
+
+        $countProducts = [];
+
+        $index = 0;
+        foreach($idProducts as $key => $value) {
+            $countProducts[$value][$key] = $key;
+        }
+
+
+        $products = Producte::whereIn('id',$idProducts)->get();
+
+
+        foreach($products as $product){
+            if(!empty($countProducts[$product->id])){
+                $product->count = count(($countProducts[$product->id]));
+            }
+        }
+
+        return $products;
+    }
+
+
 
     /**
      * Show the form for editing the specified resource.

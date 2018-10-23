@@ -1,0 +1,8 @@
+<div>
+  <h3>{{producte.name}}</h3>
+  <p>Preu {{producte.price}}</p>
+  <p *ngIf="producte.discount > 0">Preu amb descompte {{producte.price  - producte.price * producte.discount/100}}</p>
+  <p>{{producte.description}}</p>
+
+  <button (click)="addCart()">Afegir al carro</button>
+</div>

@@ -17,6 +17,9 @@ import { ProducteDetallComponent } from './producte-detall/producte-detall.compo
 import { CarritoComponent } from './carrito/carrito.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { CategoriesAdminComponent } from './categories-admin/categories-admin.component';
+import { EditCategoriaComponent } from './edit-categoria/edit-categoria.component';
+import { EditSubCategoriaComponent } from './edit-sub-categoria/edit-sub-categoria.component';
+import { SubcategoriaAdminComponent } from './subcategoria-admin/subcategoria-admin.component';
 
 
 @NgModule({
@@ -33,6 +36,9 @@ import { CategoriesAdminComponent } from './categories-admin/categories-admin.co
     CarritoComponent,
     CheckoutComponent,
     CategoriesAdminComponent,
+    EditCategoriaComponent,
+    EditSubCategoriaComponent,
+    SubcategoriaAdminComponent,
   ],
   imports: [
     BrowserModule,

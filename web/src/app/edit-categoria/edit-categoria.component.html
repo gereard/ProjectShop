@@ -1,0 +1,9 @@
+<div>
+  <input type="text" name="name" [(ngModel)]="categoria.name">
+  <input name="description" [(ngModel)]="categoria.description">
+  <button (click)="saveCategoria()">Guardar</button>
+  <p *ngIf="errorName">El nom no pot ser inferior a 3 caràcters</p>
+  <p *ngIf="errorDescription">La descripció no pot ser inferior a 3 caràcters</p>
+  <p *ngIf="exist">Aquest nom ja existeix</p>
+
+</div>

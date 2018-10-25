@@ -9,6 +9,7 @@ export class CategoriaService {
 
     constructor(private http: HttpClient) { }
     private url = 'http://localhost/api/categories';
+
     public getCategories(): Observable<any> {
         return this.http.get<any>(this.url);
     }

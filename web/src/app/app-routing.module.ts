@@ -8,6 +8,9 @@ import {ProducteDetallComponent} from "./producte-detall/producte-detall.compone
 import {CarritoComponent} from "./carrito/carrito.component";
 import {CheckoutComponent} from "./checkout/checkout.component";
 import {CategoriesAdminComponent} from "./categories-admin/categories-admin.component";
+import {EditCategoriaComponent} from "./edit-categoria/edit-categoria.component";
+import {SubcategoriaAdminComponent} from "./subcategoria-admin/subcategoria-admin.component";
+import {EditSubCategoriaComponent} from "./edit-sub-categoria/edit-sub-categoria.component";
 
 const routes: Routes = [
     { path: 'login', component: LoginComponent },
@@ -20,7 +23,11 @@ const routes: Routes = [
     { path: 'cart', component: CarritoComponent},
     { path: 'checkout', component: CheckoutComponent},
     { path: 'admin/categories', component: CategoriesAdminComponent},
-
+    { path: 'admin/categories/edit/:id', component: EditCategoriaComponent},
+    { path: 'admin/categories/create', component: EditCategoriaComponent},
+    { path: 'admin/subcategories', component: SubcategoriaAdminComponent},
+    { path: 'admin/subcategories/edit/:id', component: EditSubCategoriaComponent},
+    { path: 'admin/subcategories/create', component: EditSubCategoriaComponent},
 ];
 
 @NgModule({

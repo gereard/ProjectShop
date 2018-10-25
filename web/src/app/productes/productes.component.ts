@@ -26,7 +26,6 @@ export class ProductesComponent implements OnInit {
         });
         this.producteServei.getProductes(this.routeParams).subscribe(data => {
           this.productes = data;
-          console.log(this.productes)
         })
     }
 }

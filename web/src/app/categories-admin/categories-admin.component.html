@@ -1,6 +1,5 @@
+ <i class="fas fa-plus" routerLink="/admin/categories/create"></i>
+ <h6 *ngIf="errorDeleting">No s'ha pogut eliminar</h6>
 <div  *ngFor="let categoria of categories">
-  <h2 [routerLink]="['/categoria', categoria.name]">{{categoria.name}}</h2>
-  <ul *ngFor="let subcategoria of categoria.subcategories | slice:0:1" >
-    <li [routerLink]="['/productes/',categoria.name, subcategoria.name]">{{subcategoria.name}}</li>
-  </ul>
+  <p [routerLink]="['/admin/categories/edit', categoria.id]">{{categoria.name}}</p>  <i class="fas fa-minus" (click)="delete(categoria.id)" ></i>
 </div>

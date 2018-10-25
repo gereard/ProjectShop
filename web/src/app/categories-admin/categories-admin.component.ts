@@ -14,9 +14,21 @@ export class CategoriesAdminComponent implements OnInit {
 
   categories = <any>[];
 
+  errorDeleting = false;
   ngOnInit() {
     this.getCategories();
   }
+
+
+  delete(id){
+    this.errorDeleting = false;
+    this.categoriesServei.deleteCategoria(id).subscribe(data => {
+        this.categories = data;
+    },error1 => {
+        this.errorDeleting = true;
+    })
+  }
+
 
   getCategories(){
       this.categoriesServei.getCategories().subscribe(data => {

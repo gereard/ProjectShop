@@ -21,8 +21,6 @@ import { EditCategoriaComponent } from './edit-categoria/edit-categoria.componen
 import { EditSubCategoriaComponent } from './edit-sub-categoria/edit-sub-categoria.component';
 import { SubcategoriaAdminComponent } from './subcategoria-admin/subcategoria-admin.component';
 import { HomeComponent } from './home/home.component';
-import { PerfilComponent } from './perfil/perfil.component';
-
 
 @NgModule({
   declarations: [
@@ -42,7 +40,6 @@ import { PerfilComponent } from './perfil/perfil.component';
     EditSubCategoriaComponent,
     SubcategoriaAdminComponent,
     HomeComponent,
-    PerfilComponent,
   ],
   imports: [
     BrowserModule,

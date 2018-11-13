@@ -12,11 +12,10 @@ import {EditCategoriaComponent} from "./edit-categoria/edit-categoria.component"
 import {SubcategoriaAdminComponent} from "./subcategoria-admin/subcategoria-admin.component";
 import {EditSubCategoriaComponent} from "./edit-sub-categoria/edit-sub-categoria.component";
 import {HomeComponent} from "./home/home.component";
-import {PerfilComponent} from "./perfil/perfil.component";
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'perfil', component: PerfilComponent },
+    { path: 'profile', component: ProfileComponent },
     { path: 'login', component: LoginComponent },
     { path: 'categories', component: CategoriaComponent },
     { path: 'categoria/:name', component: SubcategoriesComponent},

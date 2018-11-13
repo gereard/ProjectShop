@@ -12,6 +12,7 @@ import {EditCategoriaComponent} from "./edit-categoria/edit-categoria.component"
 import {SubcategoriaAdminComponent} from "./subcategoria-admin/subcategoria-admin.component";
 import {EditSubCategoriaComponent} from "./edit-sub-categoria/edit-sub-categoria.component";
 import {HomeComponent} from "./home/home.component";
+import {ProfileComponent} from "./profile/profile.component";
 
 const routes: Routes = [
     { path: '', component: HomeComponent },

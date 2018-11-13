@@ -20,6 +20,8 @@ import { CategoriesAdminComponent } from './categories-admin/categories-admin.co
 import { EditCategoriaComponent } from './edit-categoria/edit-categoria.component';
 import { EditSubCategoriaComponent } from './edit-sub-categoria/edit-sub-categoria.component';
 import { SubcategoriaAdminComponent } from './subcategoria-admin/subcategoria-admin.component';
+import { HomeComponent } from './home/home.component';
+import { PerfilComponent } from './perfil/perfil.component';
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import { SubcategoriaAdminComponent } from './subcategoria-admin/subcategoria-ad
     EditCategoriaComponent,
     EditSubCategoriaComponent,
     SubcategoriaAdminComponent,
+    HomeComponent,
+    PerfilComponent,
   ],
   imports: [
     BrowserModule,

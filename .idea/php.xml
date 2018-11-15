@@ -76,6 +76,11 @@
       <path value="$PROJECT_DIR$/api/vendor/psr/log" />
       <path value="$PROJECT_DIR$/api/vendor/barryvdh/laravel-cors" />
       <path value="$PROJECT_DIR$/api/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/api/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/api/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/api/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/api/vendor/namshi/jose" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

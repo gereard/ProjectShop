@@ -3,7 +3,6 @@
     margin-left: auto;
     margin-right: auto;
     padding: 1rem .5rem;
-    position: fixed;
     z-index: 50;
     top: 0;
     right: 0;
@@ -56,7 +55,7 @@
 
 .c-main-header__col {
     position: absolute;
-    display: flex;
+    display: initial;
     justify-content: space-between;
     align-items: center;
     top: 0;

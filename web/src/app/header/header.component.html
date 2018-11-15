@@ -1,15 +1,12 @@
     <header class="c-main-header">
+       <img src="header/logo.png" style="
+    width: 120px;" >
         <div class="c-main-header__col">
-            <button class="c-main-header__trigger qa-menu-button mkt-trigger-menu" >    <i class="fa fa-bars fa-3x"></i></button>
+           
             <nav class="navbar navbar-default" role="navigation">
+               
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-
-                    </button>
+                    <button class="c-main-header__trigger qa-menu-button mkt-trigger-menu" >    <i class="fa fa-bars fa-3x"></i></button>
                 </div>
 
                 <div class="js-header-sep c-main-header__hor-sep"></div>
@@ -26,10 +23,15 @@
 </div>
 
 
-<ul class="nav navbar-nav navbar-right">
-    <li> <a routerLink="/login">Login</a></li>
-    <li> <a routerLink="/categories">Categoria</a></li>
-    <li> <a routerLink="/cart"> <i class="fas fa-shopping-cart"></i></a></li>
+<ul class="navbar-nav-icons ">
+   <a style="margin-right: 15px;" *ngIf="!logged" routerLink="/login" (click)="logout()">
+       <i class="far fa-user-alt fa-2x"></i> Login</a>
+    
+    <a style="margin-right: 15px;" routerLink="/cart"> 
+        <i class="fas fa-shopping-cart fa-2x"></i>Carro</a>
+    
+    
+    <a style="margin-left: 15px;"routerLink="/categories">Categoria</a>
 </ul>
 
 </nav>

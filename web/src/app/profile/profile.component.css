@@ -1,0 +1,29 @@
+.contenidorPerfil {
+    /*background-color:blue;*/
+    width: 50%;
+    height:100%;
+    margin: auto;
+    margin-top: 40px;
+}
+.contenidorTitol {
+    /*background-color:blue;*/
+    width: 100%;
+    margin: auto;
+    border-bottom: 1px solid;
+    border-color: #4D94FF;
+}
+.llistaInputs {
+
+    margin: auto;
+    margin-top: 40px;
+}
+.llistaInputs h4{
+    /*text-align: center;*/
+}
+
+.separacio{
+    margin-top: 20px;
+}
+.boto{
+    margin: 20px 20px 20px 20px;
+}

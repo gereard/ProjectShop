@@ -13,12 +13,13 @@ import {SubcategoriaAdminComponent} from "./subcategoria-admin/subcategoria-admi
 import {EditSubCategoriaComponent} from "./edit-sub-categoria/edit-sub-categoria.component";
 import {HomeComponent} from "./home/home.component";
 import {ProfileComponent} from "./profile/profile.component";
+import {AuthGuard} from "./auth/auth.guard";
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'profile', component: ProfileComponent },
     { path: 'login', component: LoginComponent },
-    { path: 'categories', component: CategoriaComponent },
+    { path: 'categories', component: CategoriaComponent,canActivate: [AuthGuard] },
     { path: 'categoria/:name', component: SubcategoriesComponent},
     { path: 'subcategoria/', component: SubcategoriesComponent},
     { path: 'productes/:categoria/:subcategoria', component: ProductesComponent},

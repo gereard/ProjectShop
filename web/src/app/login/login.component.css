@@ -21,6 +21,7 @@
     margin-left: auto;
     margin-right: auto;
     background: #fff;
+    margin-top: 50px;
 }
 .sombra-suave {
     box-shadow: 0 0 10px 0 rgba(0,0,0,.15);

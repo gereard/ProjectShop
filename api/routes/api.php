@@ -31,6 +31,8 @@ Route::get('categoriaById/{id}', 'Controller\CategoriaController@getCategoria');
 Route::get('subcategoriaById/{id}', 'Controller\CategoriaController@getSubcategoria');
 Route::get('subcategories/{name}', 'Controller\CategoriaController@showSub');
 Route::get('productes/{categoria}/{subcategoria}', 'Controller\ProducteController@index');
+Route::get('productes/home', 'Controller\ProducteController@indexHome');
+Route::get('productes/stock', 'Controller\ProducteController@finalStock');
 Route::get('producte/{name}', 'Controller\ProducteController@show');
 Route::post('productes', 'Controller\ProducteController@cartProducts');
 Route::post('categories/save', 'Controller\CategoriaController@saveCategory');

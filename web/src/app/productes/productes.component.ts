@@ -28,4 +28,6 @@ export class ProductesComponent implements OnInit {
           this.productes = data;
         })
     }
+
+
 }

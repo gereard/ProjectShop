@@ -9,69 +9,24 @@
    <div class="contenidorTitol">
      <h3>Últimes <b>Novetats</b></h3>
    </div>
-    
+
+
     <div class="contenidor_productes">
-      
-      <div class="contenidor_info_producte">
+      <div class="contenidor_info_producte" *ngFor="let producte of productes">
         <div class="contenidor_imatge_producte">
-          <img src="" class="img-fluid" alt="Responsive image">
+          <img [src]="producte.image" class="img-fluid" alt="Responsive image">
         </div>
         <div class="nom_producte">
-          <p>nom producte</p>
+          <p>{{producte.name}}</p>
         </div>
         <div class="preu_producte">
-          <p>preu producte</p>
+            <p *ngIf="producte.discount > 0">{{producte.price  - producte.price * producte.discount/100}}. Descompte {{producte.discount}}%</p>
+            <p *ngIf="producte.discount == 0">{{producte.price}}</p>
         </div>
         <div class="detall_producte">
-          <button type="button" class="btn btn-primary">Detall Producte</button>
+          <button type="button" [routerLink]="['/producte/',producte.name]" class="btn btn-primary">Detall Producte</button>
         </div>                 
       </div>
-           
-           <div class="contenidor_info_producte">
-        <div class="contenidor_imatge_producte">
-          <img src="" class="img-fluid" alt="Responsive image">
-        </div>
-        <div class="nom_producte">
-          <p>nom producte</p>
-        </div>
-        <div class="preu_producte">
-          <p>preu producte</p>
-        </div>
-        <div class="detall_producte">
-          <button type="button" class="btn btn-primary">Detall Producte</button>
-        </div>                 
-      </div>
-           
-           <div class="contenidor_info_producte">
-        <div class="contenidor_imatge_producte">
-          <img src="" class="img-fluid" alt="Responsive image">
-        </div>
-        <div class="nom_producte">
-          <p>nom producte</p>
-        </div>
-        <div class="preu_producte">
-          <p>preu producte</p>
-        </div>
-        <div class="detall_producte">
-          <button type="button" class="btn btn-primary">Detall Producte</button>
-        </div>                 
-      </div>
-           
-           <div class="contenidor_info_producte">
-        <div class="contenidor_imatge_producte">
-          <img src="" class="img-fluid" alt="Responsive image">
-        </div>
-        <div class="nom_producte">
-          <p>nom producte</p>
-        </div>
-        <div class="preu_producte">
-          <p>preu producte</p>
-        </div>
-        <div class="detall_producte">
-          <button type="button" class="btn btn-primary">Detall Producte</button>
-        </div>                 
-      </div>
-            
     </div>
   </div>
   
@@ -81,24 +36,23 @@
      <h3>Final <b>Stock</b></h3>
    </div>
 
-    <div class="contenidor_productes">
-     
-     <div class="contenidor_info_producte">
-        <div class="contenidor_imatge_producte">
-          <img src="" class="img-fluid" alt="Responsive image">
-        </div>
-        <div class="nom_producte">
-          <p>nom producte</p>
-        </div>
-        <div class="preu_producte">
-          <p>preu producte</p>
-        </div>
-        <div class="detall_producte">
-          <button type="button" class="btn btn-primary">Detall Producte</button>
-        </div>                 
+      <div class="contenidor_productes">
+          <div class="contenidor_info_producte" *ngFor="let producte of productesStock">
+              <div class="contenidor_imatge_producte">
+                  <img [src]="producte.image" class="img-fluid" alt="Responsive image">
+              </div>
+              <div class="nom_producte">
+                  <p>{{producte.name}}</p>
+              </div>
+              <div class="preu_producte">
+                  <p *ngIf="producte.discount > 0">{{producte.price  - producte.price * producte.discount/100}}. Descompte {{producte.discount}}%</p>
+                  <p *ngIf="producte.discount == 0">{{producte.price}}</p>
+              </div>
+              <div class="detall_producte">
+                  <button type="button" [routerLink]="['/producte/',producte.name]" class="btn btn-primary">Detall Producte</button>
+              </div>
+          </div>
       </div>
-      
-    </div>
   </div>
   
 </div>

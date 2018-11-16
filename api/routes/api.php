@@ -22,6 +22,7 @@ Route::post('signup', 'Controller\AuthController@signup');
 
 Route::get('users/logout', 'Controller\AuthController@logout');
 Route::post('users/authenticate', 'Controller\AuthController@login');
+Route::post('users/rolebytoken', 'Controller\AuthController@guardRole');
 Route::post('users/signup', 'Controller\AuthController@signup');
 Route::get('categories', 'Controller\CategoriaController@index');
 Route::get('subcategories', 'Controller\CategoriaController@subIndex');

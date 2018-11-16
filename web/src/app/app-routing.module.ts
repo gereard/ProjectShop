@@ -14,10 +14,11 @@ import {EditSubCategoriaComponent} from "./edit-sub-categoria/edit-sub-categoria
 import {HomeComponent} from "./home/home.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {AuthGuard} from "./auth/auth.guard";
+import {RoleGuard} from "./auth/role.guard";
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'profile', component: ProfileComponent },
+    { path: 'profile', component: ProfileComponent, canActivate: [RoleGuard]},
     { path: 'login', component: LoginComponent },
     { path: 'categories', component: CategoriaComponent,canActivate: [AuthGuard] },
     { path: 'categoria/:name', component: SubcategoriesComponent},

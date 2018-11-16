@@ -19,6 +19,17 @@ class AuthController extends Controller
 {
 
 
+    public function guardRole(Request $request)
+    {
+        $user = JWTAuth::toUser($request->get('token'));
+        $user->admin = false;
+
+        if($user->role == 1){
+            $user->admin = true;
+        }
+        return $user;
+    }
+
     public function signup(Request $request)
     {
 

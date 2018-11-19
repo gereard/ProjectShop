@@ -2,7 +2,9 @@
 .c-main-header {
     margin-left: auto;
     margin-right: auto;
-    padding: 1rem .5rem;
+    padding-left: 10px !important;
+    padding: .5rem;
+    padding-top: 0px !important;
     z-index: 50;
     top: 0;
     right: 0;
@@ -18,11 +20,15 @@
 
 .navbar-nav-icons {
 display: flex;
+    width: 400px !important;
 -ms-flex-direction: column;
 margin-right: 200px;
 margin-bottom: 0;
+padding-bottom: 0px;
 list-style: none;
-margin-top: 15px;   
+margin-top: 15px;
+    padding-top: 0px !important;
+    
 }
 .glyphicon{
     font-size: 20px !important;
@@ -43,7 +49,17 @@ margin-top: 15px;
 .c-main-header__hor-sep.is-visible {
     display: flex
 }
+.primer{
+    display: initial;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
 
+    margin: auto;
+    width: 900px !important;
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
 .c-main-header__col {
     position: absolute;
     display: initial;
@@ -67,8 +83,8 @@ margin-top: 15px;
 
 .c-main-header__trigger {
     padding: 0;
-    margin-left: 150px !important;
-    margin-top: 5px !important;
+    margin-left: 0px !important;
+    margin-top: 1px !important;
     cursor: pointer;
     color: #4d94ff;
     border: 0;
@@ -84,9 +100,6 @@ margin-top: 15px;
     margin-bottom: -.30769rem
 }
 
-img {
-    
-}
 
 .c-user-menu__item {
     display: flex;
@@ -105,18 +118,16 @@ img {
 }
 
 .c-search__form {
-    position: absolute;
-    top: 12px;
-    left: 0;
-    
+    left: 200px !important;   
+    bottom: 10px !important;
     transform: scale(0)
-        
+
 }
 
 .c-search__query {
     width: 100%;
     height: 3.38462rem;
-    margin: 0 auto;
+    margin: 7px auto;
     padding-left: 3.38462rem;
     font-size: 1.15385rem;
     border: 2px solid #e1e1e1;
@@ -195,6 +206,7 @@ img {
 
     .c-search {
         display: flex;
+        width: 950px !important;
         justify-content: center
     }
 
@@ -203,9 +215,8 @@ img {
     }
 
     .c-search__form {
-        position: relative;
-        width: 100%;
-        max-width: 41.53846rem;
+       left: 200px !important;  
+        width: 70%;
         margin: 0 2.30769rem;
         transform: none
     }

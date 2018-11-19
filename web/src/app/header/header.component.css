@@ -50,7 +50,6 @@ margin-top: 15px;
     justify-content: space-between;
     align-items: center;
     top: 0;
-    bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
@@ -107,10 +106,11 @@ img {
 
 .c-search__form {
     position: absolute;
-    top: 0;
+    top: 12px;
     left: 0;
-    padding-top: 1.000rem;
+    
     transform: scale(0)
+        
 }
 
 .c-search__query {
@@ -227,17 +227,4 @@ img {
         font-size: 1.69231rem
     }
 }
-
-@media(min-width:992px) {
-    .c-user-menu__text {
-        display: block
-    }
-}
-
-@media(max-width:768px) {
-    .c-user-menu__line {
-        display: none
-    }
-}
-
 

@@ -24,7 +24,7 @@
 
 
 <ul class="navbar-nav-icons ">
-   <a style="margin-right: 15px;" *ngIf="!logged" routerLink="/login" (click)="logout()">
+   <a style="margin-right: 15px;"ng-show="login()" *ngIf="!logged" routerLink="/login">
        <i class="far fa-user-alt fa-2x"></i> Login</a>
     
     <a style="margin-right: 15px;" routerLink="/cart"> 

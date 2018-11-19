@@ -42,7 +42,7 @@
         <label for="exampleInputPassword2">Contrasenya*</label>
         <input type="password"  [(ngModel)]="register.password" name="password"  class="form-control" id="exampleInputPassword2" placeholder="Password">
       </div>
-        <div *ngIf="error">Les dades no són correctes</div>
+        <div *ngIf="errorSigning">Les dades no són correctes</div>
 
          <button type="submit" class="btn btn-primary">Crear el compte</button>
     </form>

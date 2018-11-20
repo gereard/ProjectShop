@@ -4,7 +4,7 @@
     width: 100px; padding-top: 5px !important;margin-right: 50px !important;" ></a>
         <div class="primer">
            
-            <nav class="navbar navbar-default" role="navigation">
+            <nav class="navbar navbar-default" role="navigation" style="bottom: 4px !important">
 
                 <div class="navbar-header">
                     <button class="c-main-header__trigger qa-menu-button mkt-trigger-menu" >    <i class="fa fa-bars fa-3x"></i></button>
@@ -21,14 +21,12 @@
         </div>
         <ul class="navbar-nav-icons">
            <a style="margin-right: 15px;" *ngIf="!logged" routerLink="/login">
-               <i class="fas fa-user fa-2x"></i>Login</a>
+               <i class="fa fa-sign-in fa-2x"></i> Login</a>
 
-            <a *ngIf="logged" (click)="logout()"><i class="fas fa-user fa-2x"></i>Logout</a>
+            <a *ngIf="logged" (click)="logout()"><i class="fa fa-sign-out fa-2x"></i> Logout</a>
 
             <a style="margin-right: 15px;" routerLink="/cart">
                 <i class="fas fa-shopping-cart fa-2x"></i>Carro</a>
-
-
             <a style="margin-left: 15px;" routerLink="/categories"> <i class="fas fa-shopping-cart fa-2x"></i>Categoria</a>
         </ul>
 

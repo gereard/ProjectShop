@@ -1,39 +1,35 @@
     <header class="c-main-header">
       <a routerLink="/">
-       <img src="header/logo.png"  style="
+       <img src="./assets/logo.png"  style="
     width: 100px; padding-top: 5px !important;margin-right: 50px !important;" ></a>
         <div class="primer">
            
             <nav class="navbar navbar-default" role="navigation">
-               
+
                 <div class="navbar-header">
                     <button class="c-main-header__trigger qa-menu-button mkt-trigger-menu" >    <i class="fa fa-bars fa-3x"></i></button>
                 </div>
 
-                <div class="c-main-header__col c-main-header__col--end">
-                   <div class="c-search__trigger js-search-trigger">
-                            <i class="c-icon c-icon--bold">&nbsp;</i>
-                        </div>
-                    <div class="c-search">
-                        
+
+
                         <form class="c-search__form js-search-form" method="GET" action="https://www.pccomponentes.com/buscar/">
                             <input type="text" id="query" name="query" required="required" class="c-search__query qa-search-box mkt-search-query form-control" placeholder="Busca en PcUvic..." data- autocomplete="off">
                         </form>
-                    </div>
-                </div>
 
             </nav>
 
-        </div>     
-        <ul class="navbar-nav-icons ">
-           <a style="margin-right: 15px;"ng-show="login()" *ngIf="!logged" routerLink="/login">
-               <i class="far fa-user-alt fa-2x"></i> Login</a>
+        </div>
+        <ul class="navbar-nav-icons">
+           <a style="margin-right: 15px;" *ngIf="!logged" routerLink="/login">
+               <i class="fas fa-user fa-2x"></i>Login</a>
 
-            <a style="margin-right: 15px;" routerLink="/cart"> 
+            <a *ngIf="logged" (click)="logout()"><i class="fas fa-user fa-2x"></i>Logout</a>
+
+            <a style="margin-right: 15px;" routerLink="/cart">
                 <i class="fas fa-shopping-cart fa-2x"></i>Carro</a>
 
 
-            <a style="margin-left: 15px;"routerLink="/categories">Categoria</a>
+            <a style="margin-left: 15px;" routerLink="/categories"> <i class="fas fa-shopping-cart fa-2x"></i>Categoria</a>
         </ul>
 
 </header>

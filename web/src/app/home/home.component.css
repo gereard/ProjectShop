@@ -45,7 +45,7 @@ p{
 
 .contenidor_info_producte{
   width: 23%;
-  height: 300px;
+  height: 340px;
   background-color: white;
   margin-top: 10px;
   margin-left: 1.6%;
@@ -59,8 +59,9 @@ p{
 .contenidor_imatge_producte{
   width: 100%;
   height: 180px;
-  background-color: red;
+  background-color: white;
 }
+
 
 .nom_producte{
   margin-top: 10px;

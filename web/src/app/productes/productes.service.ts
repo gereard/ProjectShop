@@ -13,4 +13,11 @@ export class ProductesService {
     public getProductes(obj): Observable<any> {
         return this.http.get<any>( this.url+'/'+obj.categoria+'/'+obj.subcategoria);
     }
+
+    public getHomeProducts(): Observable<any> {
+        return this.http.get<any>( this.url+'/home');
+    }
+    public getFinalStockProducts(): Observable<any> {
+        return this.http.get<any>( this.url+'/stock');
+    }
 }

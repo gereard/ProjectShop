@@ -18,6 +18,14 @@ export class AuthenticationService {
     }
 
 
+    roleToken(token: string) {
+        return this.http.post<any>('http://localhost/api/users/rolebytoken', { token })
+            .pipe(map(user => {
+                return user;
+            }));
+    }
+
+
     signup(email: string, password: string, name: string) {
         return this.http.post<any>('http://localhost/api/users/signup', { email, password, name })
             .pipe(map(user => {

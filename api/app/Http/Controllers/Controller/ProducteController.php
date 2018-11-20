@@ -19,6 +19,17 @@ class ProducteController extends Controller
             ->where('categoria.name','=',$categoria)->where('subcategoria.name','=',$subcategoria)->get(['product.*']);
     }
 
+    public function indexHome()
+    {
+        return Producte::take(4)->get();
+
+    }
+
+    public function finalStock()
+    {
+        return Producte::where('stock','<',15)->take(10)->get();
+    }
+
     /**
      * Show the form for creating a new resource.
      *

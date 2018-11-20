@@ -2,6 +2,10 @@
 	background-color: #373a48;
 	color:white;
     display: block;
+    position: relative;
+    width: 100%;
+    bottom: 0 !important;
+	margin-top: 120px;
 }
 
 #myFooter .footer-copyright{

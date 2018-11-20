@@ -44,6 +44,12 @@ export class LoginComponent implements OnInit {
 
 
     signup(){
+
+      if(this.register.password.length < 6 || this.register.name.length < 6){
+          this.errorSigning = true;
+          return;
+      }
+
         this.authenticationService.signup(this.register.email, this.register.password, this.register.name)
             .pipe(first())
             .subscribe(

@@ -19,6 +19,17 @@ class AuthController extends Controller
 {
 
 
+    public function guardRole(Request $request)
+    {
+        $user = JWTAuth::toUser($request->get('token'));
+        $user->admin = false;
+
+        if($user->role == 1){
+            $user->admin = true;
+        }
+        return $user;
+    }
+
     public function signup(Request $request)
     {
 
@@ -55,7 +66,7 @@ class AuthController extends Controller
             'password'=> 'required'
         ]);
         if ($validator->fails()) {
-            return response()->json($validator->errors());
+            abort(401);
         }
         $credentials = $request->only('email', 'password');
         try {

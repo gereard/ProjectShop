@@ -20,6 +20,8 @@
           <p>{{producte.name}}</p>
         </div>
         <div class="preu_producte">
+            <p *ngIf="producte.discount == 0">&nbsp;</p>
+            <p><del *ngIf="producte.discount > 0"><strong>{{producte.price}}</strong></del></p>
             <p *ngIf="producte.discount > 0">{{producte.price  - producte.price * producte.discount/100}}. Descompte {{producte.discount}}%</p>
             <p *ngIf="producte.discount == 0">{{producte.price}}</p>
         </div>
@@ -45,6 +47,8 @@
                   <p>{{producte.name}}</p>
               </div>
               <div class="preu_producte">
+                  <p *ngIf="producte.discount == 0">&nbsp;</p>
+                  <p><del *ngIf="producte.discount > 0"><strong>{{producte.price}}</strong></del></p>
                   <p *ngIf="producte.discount > 0">{{producte.price  - producte.price * producte.discount/100}}. Descompte {{producte.discount}}%</p>
                   <p *ngIf="producte.discount == 0">{{producte.price}}</p>
               </div>

@@ -21,9 +21,9 @@
         </div>
         <div class="preu_producte">
             <p *ngIf="producte.discount == 0">&nbsp;</p>
-            <p><del *ngIf="producte.discount > 0"><strong>{{producte.price}}</strong></del></p>
-            <p *ngIf="producte.discount > 0">{{producte.price  - producte.price * producte.discount/100}}. Descompte {{producte.discount}}%</p>
-            <p *ngIf="producte.discount == 0">{{producte.price}}</p>
+            <p><del style="color:red" *ngIf="producte.discount > 0"><strong>{{producte.price}}€</strong></del></p>
+            <p *ngIf="producte.discount > 0"><strong>{{producte.price  - producte.price * producte.discount/100}}€ </strong> Descompte {{producte.discount}}%</p>
+            <p *ngIf="producte.discount == 0"><strong>{{producte.price}}€</strong></p>
         </div>
         <div class="detall_producte">
           <button type="button" [routerLink]="['/producte/',producte.name]" class="btn btn-primary">Detall Producte</button>
@@ -48,9 +48,9 @@
               </div>
               <div class="preu_producte">
                   <p *ngIf="producte.discount == 0">&nbsp;</p>
-                  <p><del *ngIf="producte.discount > 0"><strong>{{producte.price}}</strong></del></p>
-                  <p *ngIf="producte.discount > 0">{{producte.price  - producte.price * producte.discount/100}}. Descompte {{producte.discount}}%</p>
-                  <p *ngIf="producte.discount == 0">{{producte.price}}</p>
+                  <p><del style="color:red" *ngIf="producte.discount > 0"><strong>{{producte.price}}€</strong></del></p>
+                  <p *ngIf="producte.discount > 0"><strong>{{producte.price  - producte.price * producte.discount/100}}€ </strong> Descompte {{producte.discount}}%</p>
+                  <p *ngIf="producte.discount == 0"><strong>{{producte.price}}€</strong></p>
               </div>
               <div class="detall_producte">
                   <button type="button" [routerLink]="['/producte/',producte.name]" class="btn btn-primary">Detall Producte</button>

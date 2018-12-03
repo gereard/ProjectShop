@@ -1,16 +1,53 @@
-    <header class="c-main-header">
-      <a routerLink="/">
-       <img src="./assets/logo.png"  style="
-    width: 100px; padding-top: 5px !important;margin-right: 50px !important;" ></a>
+<header class="c-main-header">
+    <a routerLink="/">
+       <img src="./assets/logo.png"  style=" width: 100px; padding-top: 5px !important;margin-right: 50px !important;" >
+    </a>
         <div class="primer">
            
             <nav class="navbar navbar-default" role="navigation" style="bottom: 4px !important">
 
-                <div class="navbar-header">
-                    <button class="c-main-header__trigger qa-menu-button mkt-trigger-menu" >    <i class="fa fa-bars fa-3x"></i></button>
-                </div>
+                <div class="navbar-header" id="open">
+                   
+                    <button href="#" class="c-main-header__trigger qa-menu-button mkt-trigger-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-bars fa-3x"></i>
+                    </button>
+            
+            
+            <ul class="dropdown-menu">
+                  <li class="navbar-tags"><a href="#">CATEGORIA 1</a>
+                  <ul class="dropdown">
+    <li><a href="#">SUBCATEGORIA 1</a></li>
+    <li><a href="#">SUBCATEGORIA 2</a></li>
+    <li><a href="#">SUBCATEGORIA 3</a></li>
+             </ul>
+              </li>
+              <li class="navbar-tags"><a href="#">CATEGORIA 2</a>
+                  <ul class="dropdown">
+    <li><a href="#">SUBCATEGORIA 1</a></li>
+    <li><a href="#">SUBCATEGORIA 2</a></li>
+    <li><a href="#">SUBCATEGORIA 3</a></li>
+             </ul>
+              </li>
+                <li class="navbar-tags"><a href="#">CATEGORIA 3</a>
+                  <ul class="dropdown">
+    <li><a href="#">SUBCATEGORIA 1</a></li>
+    <li><a href="#">SUBCATEGORIA 2</a></li>
+    <li><a href="#">SUBCATEGORIA 3</a></li>
+             </ul>
+              </li>
+               <li class="navbar-tags"><a href="#">CATEGORIA 4</a>
+                  <ul class="dropdown">
+    <li><a href="#">SUBCATEGORIA 1</a></li>
+    <li><a href="#">SUBCATEGORIA 2</a></li>
+    <li><a href="#">SUBCATEGORIA 3</a></li>
+             </ul>
+              </li>
+            </ul>
+            
+        
+          
 
-
+      </div>
 
                         <form class="c-search__form js-search-form" method="GET" action="https://www.pccomponentes.com/buscar/">
                             <input type="text" id="query" name="query" required="required" class="c-search__query qa-search-box mkt-search-query form-control" placeholder="Busca en PcUvic..." data- autocomplete="off">

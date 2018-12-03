@@ -1,8 +1,67 @@
-<div>
-  <h3>{{producte.name}}</h3>
-  <p>Preu {{producte.price}}</p>
-  <p *ngIf="producte.discount > 0">Preu amb descompte {{producte.price  - producte.price * producte.discount/100}}</p>
-  <p>{{producte.description}}</p>
+<div class="background">
+  <div class="contenidor_imatge">
+   <!-- [src]="producte.imatge" -->
+     <img src="https://img.pccomponentes.com/articles/13/135336/1.jpg" style='width: 100%; object-fit: contain'>
+  </div>
+  
+  <div class="contenidor_info">
+   <div class="contenidro_preu"> 
+    <div>
+      <h1><b>{{producte.name}}</b></h1>
+    </div>
 
-  <button (click)="addCart()">Afegir al carro</button>
+    <div>
+      <p style="font-size: 20px; display: inline-block;">Abans:  </p>
+      <p style="font-size: 20px; display: inline-block; margin-left: 5px;"> <del style="color:red" *ngIf="producte.discount > 0">{{producte.price}} € </del></p>
+      
+      <p *ngIf="producte.discount > 0" style="font-size: 20px; display: inline-block; margin-left: 20px;">Ara: {{producte.price  - producte.price * producte.discount/100}} €</p>
+    </div>
+   </div> 
+
+   <div class="contenidor_stats">
+     <h3><b>Característiques</b></h3>
+    <div>
+     <p><!--{{producte.description}} --> Exhibició</p>
+      <ul>
+        <li>Diagonal de la pantalla: 127 cm (50 ")</li>
+        <li>Tipus HD: 4K Ultra HD</li>
+        <li>3D: No</li>
+        <li>Resolució de la pantalla: 3840 x 2160 Pixels</li>
+        <li>Tecnologia de visualització: LED</li>
+        <li>Forma de la pantalla: Plana</li>
+      </ul>
+      
+      <p><!--{{producte.description}} --> Audio</p>
+      <ul>
+        <li>Altaveus incorporats: Si</li>
+        <li>Subwoofer incorporat: Si</li>
+        <li>Potència RMS de subwoofer: 20 W</li>
+        <li>Descodificadors: DTS</li>
+        <li>Sistema d'àudio: Ultra Surround</li>
+      </ul>
+     
+      <p><!--{{producte.description}} --> Pes i dimensions</p>
+      <ul>
+        <li>Ample: 1133 mm</li>
+        <li>Profunditat: 87,9 mm</li>
+        <li>Alçada: 663 mm</li>
+        <li>Pes: 10,6 kg</li>
+        <li>Ample del dispositiu (amb suport): 1133 mm</li>
+        <li>Profunditat (amb suport): 259 mm</li>
+        <li>Alçada del dispositiu (amb suport): 722 mm</li>
+        <li>Pes amb estand: 11,9 kg</li>
+      </ul>  
+
+
+      
+    </div>
+
+    <div class="contenidor_buttons">
+      <button type="button" class="btn btn-outline-primary"(click)="addCart()">Afegir al carro</button>
+      <button type="button" class="btn btn-primary"(click)="addCart()">Comprar</button>
+    </div>
+    </div>
+  </div>
+  
+  
 </div>

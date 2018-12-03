@@ -13,6 +13,9 @@
   max-width: 47%;
   margin-top: 15px;
   display: inline-block;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .contenidor_info{
@@ -26,12 +29,14 @@
 .contenidro_preu{
   background-color: white;
   padding: 10px 10px 0px 10px;
+  border-radius: 5px;
 }
 
 .contenidor_stats{
   background-color: white;
   margin-top: 5px;
   padding: 10px;
+  border-radius: 5px;
 }
 
 .btn-primary:hover{

@@ -17,8 +17,15 @@ export class AuthenticationService {
             }));
     }
 
-
     roleToken(token: string) {
+        return this.http.post<any>('http://localhost/api/users/rolebytoken', { token })
+            .pipe(map(user => {
+                return user;
+            }));
+    }
+
+
+    getUser(token: string) {
         return this.http.post<any>('http://localhost/api/users/rolebytoken', { token })
             .pipe(map(user => {
                 return user;
@@ -28,6 +35,13 @@ export class AuthenticationService {
 
     signup(email: string, password: string, name: string) {
         return this.http.post<any>('http://localhost/api/users/signup', { email, password, name })
+            .pipe(map(user => {
+                return user;
+            }));
+    }
+
+    saveUser(usuari) {
+        return this.http.post<any>('http://localhost/api/users/edit', { usuari })
             .pipe(map(user => {
                 return user;
             }));

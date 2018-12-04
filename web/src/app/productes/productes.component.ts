@@ -24,7 +24,6 @@ export class ProductesComponent implements OnInit {
     ngOnInit() {
         this.route.params.subscribe(params => {
            this.routeParams = params;
-           console.log(this.breadcrumb)
            this.breadcrumb = params;
         });
         this.producteServei.getProductes(this.routeParams).subscribe(data => {

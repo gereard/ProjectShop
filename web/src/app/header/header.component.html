@@ -1,25 +1,25 @@
-<header class="c-main-header">
+<header class="c-main-header" [ngStyle]="{'background-color':user.role == 1 ? 'black' : '' }">
     <a routerLink="/">
        <img src="./assets/logo.png"  style=" width: 100px; padding-top: 5px !important;margin-right: 50px !important;" >
     </a>
         <div class="primer">
-           
+
             <nav class="navbar navbar-default" role="navigation" style="bottom: 4px !important">
 
                 <div class="navbar-header" id="open">
-                   
+
                     <button href="#" class="c-main-header__trigger qa-menu-button mkt-trigger-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-bars fa-3x"></i>
                     </button>
-            
-            
+
+
             <ul class="dropdown-menu">
                 <div class="c-main-menu__top-bar"><h3 class="c-main-menu__name">TODAS LAS SECCIONES</h3></div>
                  <ul class="c-main-menu__superlist">
-                 
-                 
-                 
-                 
+
+
+
+
                  <li class="c-main-menu__superitem" data-pcc-trigger="toggle-menu-bg" data-pcc-event="hover" data-pcc-group="menu-bg"><a id="GTM-superfamilia-1"  class="c-main-menu__superlink c-main-menu__superlink--1 mkt-menu-level1" title="Componentes">
 Componentes
 </a><span class="c-main-menu__super-trigger mkt-menu-level1" data-pcc-trigger="toggle-superfamilia-1" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" aria-hidden="true"></span><div class="c-main-menu__superblock c-main-menu__superblock--1" data-pcc-listen="toggle-superfamilia-1" data-pcc-class="is-active" data-pcc-group="superfamilias-desplegables" data-pcc-active="0" data-pcc-id-listener="5"><div class="c-main-menu__top-bar c-main-menu__top-bar--sub"><h4 class="c-main-menu__name"><a class="mkt-menu-level1"  title="Componentes">Componentes</a></h4><span role="button" class="c-main-menu__toggle" data-pcc-trigger="toggle-superfamilia-1" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" aria-hidden="true">0</span></div><ul class="c-main-menu__catlist"><li class="c-main-menu__catname">
@@ -39,7 +39,7 @@ Componentes
 Sistemas Operativos
 </li><li class="c-main-menu__catitem"><a class="c-main-menu__catlink mkt-menu-level3"  title="Sistemas operativos">Sistemas operativos
  </a></li></ul></div></li>
- 
+
  <li class="c-main-menu__superitem" data-pcc-trigger="toggle-menu-bg" data-pcc-event="hover" data-pcc-group="menu-bg"><a id="GTM-superfamilia-119"  class="c-main-menu__superlink c-main-menu__superlink--119 mkt-menu-level1" title="Ordenadores">
 Ordenadores
 </a><span class="c-main-menu__super-trigger mkt-menu-level1" data-pcc-trigger="toggle-superfamilia-119" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" aria-hidden="true"></span><div class="c-main-menu__superblock c-main-menu__superblock--119" data-pcc-listen="toggle-superfamilia-119" data-pcc-class="is-active" data-pcc-group="superfamilias-desplegables" data-pcc-active="0" data-pcc-id-listener="6"><div class="c-main-menu__top-bar c-main-menu__top-bar--sub"><h4 class="c-main-menu__name"><a class="mkt-menu-level1"  title="Ordenadores">Ordenadores</a></h4><span role="button" class="c-main-menu__toggle" data-pcc-trigger="toggle-superfamilia-119" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" aria-hidden="true">0</span></div><ul class="c-main-menu__catlist"><li class="c-main-menu__catname">
@@ -242,9 +242,9 @@ Home Audio
 </a></li></ul></div></li>
             </ul>
                     </ul>
-            
-        
-          
+
+
+
 
       </div>
 
@@ -256,6 +256,7 @@ Home Audio
 
         </div>
         <ul class="navbar-nav-icons">
+
            <a style="margin-right: 15px;" *ngIf="!logged" routerLink="/login">
                <i class="fa fa-sign-in fa-2x"></i> Login</a>
 

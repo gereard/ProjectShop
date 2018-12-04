@@ -11,10 +11,12 @@
     </div>
 
     <div>
-      <p style="font-size: 20px; display: inline-block;">Abans:  </p>
-      <p style="font-size: 20px; display: inline-block; margin-left: 5px;"> <del style="color:red" *ngIf="producte.discount > 0">{{producte.price}} € </del></p>
+      <p style="font-size: 20px; display: inline-block;" *ngIf="producte.discount > 0">Abans:  </p>
+      <p style="font-size: 20px; display: inline-block; margin-left: 5px;"> <del style="color:red" *ngIf="producte.discount > 0">{{producte.price}} € </del>
+     
       
       <p *ngIf="producte.discount > 0" style="font-size: 20px; display: inline-block; margin-left: 20px;">Ara: {{producte.price  - producte.price * producte.discount/100}} €</p>
+       <p style="font-size: 20px; display: inline-block;" *ngIf="producte.discount == 0">Preu: {{producte.price}} € </p>
     </div>
    </div> 
 

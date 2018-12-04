@@ -224,3 +224,26 @@ box-shadow: 0 1px 2px rgba(0, 0, 0, 0);
   text-decoration: none;
     left: -1% !important;
 }
+
+
+.c-main-menu__superitem:hover .c-main-menu__superblock {
+    margin-top: 2.5rem !important;
+}
+.c-main-menu__top-bar--sub {
+    background: #4d94ff;
+}
+.c-main-menu__catname {
+    background: #4d94ff;
+}
+
+.c-main-menu__supername:after, .c-main-menu__top-bar:after {
+    background: transparent !important;
+}
+
+.c-main-menu__superitem:hover .c-main-menu__superblock {
+    left: 12.5rem;
+}
+c-main-menu__supername, .c-main-menu__top-bar {
+    background-color: #4d94ff;
+    padding-left: 0px;
+}

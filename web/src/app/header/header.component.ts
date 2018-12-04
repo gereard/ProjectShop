@@ -12,9 +12,15 @@ export class HeaderComponent implements OnInit {
   constructor( private router: Router,
                private authenticationService: AuthenticationService) {}
  logged = false;
-  ngOnInit() {
+    user = <any>[];
+
+    ngOnInit() {
       if (localStorage.getItem('currentUser')) {
           this.logged =  true;
+          let users =  JSON.parse(localStorage.getItem('currentUser'));
+          this.authenticationService.roleToken(users.token).subscribe(data =>{
+              this.user = data;
+          })
       }
   }
 

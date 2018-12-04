@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+.background{
+  height:auto;
+  width: 80%;
+  margin: 10px auto;
+  vertical-align: top;
+}
+
+.contenidor_imatge{
+  max-width: 47%;
+  margin-top: 15px;
+  display: inline-block;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.contenidor_info{
+  width: 52%;
+  display: inline-block;
+  margin-left: 1%;
+  margin-top: 15px;
+  vertical-align: top;
+}
+
+.contenidro_preu{
+  background-color: white;
+  padding: 10px 10px 0px 10px;
+  border-radius: 5px;
+}
+
+.contenidor_stats{
+  background-color: white;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.btn-primary:hover{
+  background-color: darkblue;
+}
+
+.contenidor_buttons{
+  width: 100%;
+}
+
+.btn{
+  width: 40%;
+  margin-left: 6.66%;
+  padding: .875rem .75rem;
+}

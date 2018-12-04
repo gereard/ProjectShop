@@ -80,5 +80,51 @@ class AuthController extends Controller
     }
 
 
+    public function editUser(Request $request)
+    {
+
+
+        $user = $request->all()["usuari"];
+
+
+        $validator = Validator::make($user, [
+            'name' => 'required',
+            'pais' => 'required',
+            'cp' => 'required',
+            'ciutat' => 'required',
+            'direccio' => 'required',
+        ]);
+
+
+        if ($validator->fails()) {
+            return abort(401);
+        }
+
+
+        $checkEmail = User::where('email','=',$user["email"])->get();
+
+        if(count($checkEmail) > 0){
+            if( $checkEmail[0]->email != $user["email"]){
+                return abort(401);
+            }
+        }
+
+        $savedUser = User::find($user["id"]);
+        $savedUser->name = $user["name"];
+        $savedUser->email = $user["email"];
+        $savedUser->pais = $user["pais"];
+        $savedUser->cp = $user["cp"];
+        $savedUser->ciutat = $user["ciutat"];
+
+        if(isset($user["password"])){
+            if(strlen($user["password"]) < 6){
+                return abort(401);
+            }
+            $savedUser->password =  bcrypt($user["password"]);
+        }
+        $savedUser->save();
+        return User::find($user["id"]);
+    }
+
 
 }

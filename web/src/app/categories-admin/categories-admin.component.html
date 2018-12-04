@@ -1,5 +1,66 @@
- <i class="fas fa-plus" routerLink="/admin/categories/create"></i>
- <h6 *ngIf="errorDeleting">No s'ha pogut eliminar</h6>
-<div  *ngFor="let categoria of categories">
-  <p [routerLink]="['/admin/categories/edit', categoria.id]">{{categoria.name}}</p>  <i class="fas fa-minus" (click)="delete(categoria.id)" ></i>
+<div class="contenidorPerfil">
+    <div class="contenidorTitol">
+        <h3>MENÚ <b>ADMINISTRACIÓ</b></h3>
+    </div>
+    <div class="llistaInputs">
+       
+       <div class="row separacio">
+      <div class="col-8">
+          <!-- FORMULARI BUSCAR CATEGORIA -->
+                            <form class="card card-sm">
+                                <div class="card-body row no-gutters align-items-center">
+                                   
+                                    <!--end of col-->
+                                    <div class="col">
+                                        <input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Buscar categoria">
+                                    </div>
+                                    <!--end of col-->
+                                    <div class="col-auto">
+                                        <button class="btn btn-lg btn-info" type="submit"><i class="fa fa-search h4 text-body blanc"></i></button>
+                                    </div>
+                                    <!--end of col-->
+                                </div>
+                            </form>
+          <!-- FINAL FORMULARI -->
+      </div>
+           <div class="col-4"><button type="button" class="btn btn-success boto" routerLink="/admin/categories/create">Nova Categoria</button></div>
+        </div>
+        
+        <!-- CATEGORIES -->
+               <div class="row separacio">
+
+         <div class="col-11">
+          <div *ngFor="let categoria of categories" class="row separacio">
+              <div class="col-7"><h4>{{categoria.name}}</h4></div>
+                    <button class="btn btn-warning col-2" [routerLink]="['/admin/categories/edit', categoria.id]"> modificar</button>
+                
+                   <button class="btn btn-danger col-2 botoDel" (click)="delete(categoria.id)" >Eliminar</button>
+                </div>
+        </div>
+                   
+        </div>
+        <!-- fi categories -->
+        
+        
+        
+        
+    </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
 </div>

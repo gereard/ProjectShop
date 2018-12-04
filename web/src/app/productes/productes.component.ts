@@ -18,11 +18,14 @@ export class ProductesComponent implements OnInit {
     private sub: any;
     private routeParams : any;
 
+    breadcrumb = <any>[];
 
     productes = [];
     ngOnInit() {
         this.route.params.subscribe(params => {
            this.routeParams = params;
+           console.log(this.breadcrumb)
+           this.breadcrumb = params;
         });
         this.producteServei.getProductes(this.routeParams).subscribe(data => {
           this.productes = data;

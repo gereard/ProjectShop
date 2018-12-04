@@ -1,6 +1,28 @@
-<div  *ngFor="let producte of productes">
-  <h4 [routerLink]="['/producte/',producte.name]">{{producte.name}}</h4>
-  <p>{{producte.description}}</p>
-  <h5>{{producte.price}}</h5>
-  <h5 *ngIf="producte.discount > 0">{{producte.price  - producte.price * producte.discount/100}}</h5>
+<div class="background">
+  <div class="contenidor_ultimes_novetats">
+  <div class="contenidorTitol">
+    <h3 *ngIf="breadcrumb.categoria"><a  [routerLink]="['/categoria/',breadcrumb.categoria]">{{breadcrumb.categoria}}</a> > <b>{{breadcrumb.subcategoria}}</b></h3>
+  </div>
+
+
+  <div class="contenidor_productes">
+    <div class="contenidor_info_producte" *ngFor="let producte of productes">
+      <div class="contenidor_imatge_producte">
+        <img style="max-height: 100%; max-width: 100%; vertical-align: middle; !important; margin-left: auto;	margin-right: auto;	display: block;" [src]="producte.imatge">
+      </div>
+      <div class="nom_producte">
+        <p>{{producte.name}}</p>
+      </div>
+      <div class="preu_producte">
+        <p *ngIf="producte.discount == 0">&nbsp;</p>
+        <p><del style="color:red" *ngIf="producte.discount > 0"><strong>{{producte.price}}€</strong></del></p>
+        <p *ngIf="producte.discount > 0"><strong>{{producte.price  - producte.price * producte.discount/100}}€ </strong> Descompte {{producte.discount}}%</p>
+        <p *ngIf="producte.discount == 0"><strong>{{producte.price}}€</strong></p>
+      </div>
+      <div class="detall_producte">
+        <button type="button" [routerLink]="['/producte/',producte.name]" class="btn btn-primary">Detall Producte</button>
+      </div>
+    </div>
+  </div>
+  </div>
 </div>

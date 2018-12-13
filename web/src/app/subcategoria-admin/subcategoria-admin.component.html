@@ -1,5 +1,25 @@
-<i class="fas fa-plus" routerLink="/admin/subcategories/create"></i>
-<h6 *ngIf="errorDeleting">No s'ha pogut eliminar</h6>
-<div  *ngFor="let subcategoria of subcategories">
-  <p [routerLink]="['/admin/subcategories/edit', subcategoria.id]">{{subcategoria.name}}</p>  <i class="fas fa-minus" (click)="delete(subcategoria.id)" ></i>
+<div class="contenidorPerfil">
+  <div class="contenidorTitol">
+    <h3><b> SUBCATEGORIES </b></h3>
+  </div>
+  <div class="llistaInputs">
+
+    <div class="row separacio">
+      <div class="col-4"><button type="button" class="btn btn-success boto" routerLink="/admin/subcategories/create">Nova Subcategoria</button></div>
+    </div>
+
+    <!-- CATEGORIES -->
+    <div class="row separacio">
+
+      <div class="col-11">
+        <div *ngFor="let subcategoria of subcategories" class="row separacio">
+          <div class="col-7"><h4>{{subcategoria.name}}</h4></div>
+          <button class="btn btn-warning col-2" [routerLink]="['/admin/subcategories/edit', subcategoria.id]"> Modificar</button>
+          <button class="btn btn-danger col-2 botoDel" (click)="delete(subcategoria.id)" >Eliminar</button>
+        </div>
+      </div>
+
+    </div>
+    <!-- fi categories -->
+  </div>
 </div>

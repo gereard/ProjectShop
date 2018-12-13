@@ -1,12 +1,36 @@
-<div>
-  <input type="text" name="name" [(ngModel)]="subcategoria.name">
-  <input name="description" [(ngModel)]="subcategoria.description">
-  <select [(ngModel)]="subcategoria.idCategoria">
-    <option [value]="categoria.id" *ngFor="let categoria of categories">{{categoria.name}}</option>
-  </select>
-  <button (click)="saveSubCategoria()">Guardar</button>
-  <p *ngIf="errorName">El nom no pot ser inferior a 3 caràcters</p>
-  <p *ngIf="errorDescription">La descripció no pot ser inferior a 3 caràcters</p>
-  <p *ngIf="exist">Aquest nom ja existeix</p>
+<div class="contenidorPerfil">
+  <div class="llistaInputs">
+    <div class="row separacio">
+      <div class="col-md-5 "><h4>Nom</h4></div>
+      <div class="col-7">
+        <input type="text" class="form-control col-md-5" name="name" [(ngModel)]="subcategoria.name">
+      </div>
+    </div>
+    <div class="row separacio">
+      <div class="col-md-5 "><h4>Descripció</h4></div>
+      <div class="col-7">
+        <textarea type="text" class="form-control col-md-12" name="description" [(ngModel)]="subcategoria.description"></textarea>
+      </div>
+    </div>
+    <div class="row separacio">
+      <div class="col-md-5 "><h4>Categoria</h4></div>
+      <div class="col-7">
+        <select class="form-control col-md-12" [(ngModel)]="subcategoria.idCategoria">
+          <option [value]="categoria.id" *ngFor="let categoria of categories">{{categoria.name}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
 
+  <div style="color: red;">
+    <p *ngIf="errorName">El nom no pot ser inferior a 3 caràcters</p>
+    <p *ngIf="errorDescription">La descripció no pot ser inferior a 3 caràcters</p>
+    <p *ngIf="errorCategoria">Has de seleccionar categoria</p>
+
+    <p *ngIf="exist">Aquest nom ja existeix</p>
+  </div>
+  <div class="row separacio">
+    <button type="button" class="btn btn-success" (click)="saveSubCategoria()">Guardar</button>
+    <button type="button" class="btn btn-light" (click)="tornar()">Tornar</button>
+  </div>
 </div>

@@ -22,6 +22,8 @@ export class EditSubCategoriaComponent implements OnInit {
     exist  = false;
     errorName = false;
     errorDescription = false;
+    errorCategoria = false;
+
     private routeParams : any;
     ngOnInit() {
         this.route.params.subscribe(params => {
@@ -47,11 +49,15 @@ export class EditSubCategoriaComponent implements OnInit {
         })
     }
 
+    tornar(id){
+        this.router.navigate(['/admin/subcategories']);
+    }
+
 
     saveSubCategoria(){
         this.errorName = false;
         this.errorDescription = false;
-        this.errorDescription = false;
+        this.errorCategoria = false;
         this.subcategoria.idCategoria = this.subcategoria.idCategoria*1;
         if(this.subcategoria.name.length < 3){
             this.errorName = true;
@@ -61,6 +67,13 @@ export class EditSubCategoriaComponent implements OnInit {
             this.errorDescription = true;
             return
         }
+
+        console.log(this.subcategoria.idCategoria);
+        if(this.subcategoria.idCategoria == null || isNaN(this.subcategoria.idCategoria)){
+            this.errorCategoria = true;
+            return
+        }
+
 
         if(this.subcategoria.id){
             this.subcategoriaServei.saveSubcategoria(this.subcategoria).subscribe(data => {

@@ -1,0 +1,52 @@
+
+<div class="contenidorPerfil">
+<div class="llistaInputs">
+<div class="row separacio">
+<div class="col-10">
+<div class="row separacio">
+         <div class="col-md-5 "><h4>Nom</h4></div>
+         <div class="col-md-push-5">
+ <input type="text" class="form-control" id="nom"  [(ngModel)]="producte.name">
+ </div>
+       </div>
+       <div class="row separacio">
+         <div class="col-md-5 "><h4>Preu</h4></div>
+         <div class="col-md-push-5">
+ <input type="number" class="form-control" id="nom"  [(ngModel)]="producte.price">
+ </div>
+       </div>
+        <div class="row separacio">
+         <div class="col-md-5 "><h4>Descompte</h4></div>
+         <div class="col-md-push-5">
+ <input type="number" class="form-control" id="nom"  [(ngModel)]="producte.discount">
+ </div>
+ <select class="form-control col-md-12" [(ngModel)]="categoria.id">
+<option [value]="categoria.id" *ngFor="let categoria of categories">{{categoria.name}}</option>
+</select>
+       
+ </div>
+       </div>
+        <<select class="form-control col-md-12" [(ngModel)]="categoria.idCategoria">
+<option [value]="categoria.id" *ngFor="let categoria of categories">{{categoria.name}}</option>
+</select>
+ </div>
+       </div>
+</div>
+
+</div>
+<div class="row separacio">
+<div class="col-11">
+<textarea type="text" class="form-control col-md-8" name="description" [(ngModel)]="producte.description"></textarea>
+</div>
+</div>
+</div>
+
+<p *ngIf="errorName">El nom no pot ser inferior a 3 caràcters</p>
+<p *ngIf="errorDescription">La descripció no pot ser inferior a 3 caràcters</p>
+<p *ngIf="exist">Aquest nom ja existeix</p>
+
+<div class="row separacio">
+<button type="button" class="btn btn-success" (click)="saveProducte()">Guardar</button>
+<button type="button" class="btn btn-light" (click)="tornar()">Tornar</button>
+</div>
+</div>

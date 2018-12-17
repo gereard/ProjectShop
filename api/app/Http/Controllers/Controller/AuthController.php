@@ -115,6 +115,8 @@ class AuthController extends Controller
         $savedUser->pais = $user["pais"];
         $savedUser->cp = $user["cp"];
         $savedUser->ciutat = $user["ciutat"];
+        $savedUser->direccio = $user["direccio"];
+
 
         if(isset($user["password"])){
             if(strlen($user["password"]) < 6){

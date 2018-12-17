@@ -1,0 +1,26 @@
+<div class="contenidorPerfil">
+    <div class="contenidorTitol">
+        <h3><b>PRODUCTES</b></h3>
+    </div>
+    <div class="llistaInputs">
+       
+       <div class="row separacio">
+      
+           <div class="col-4"><button type="button" class="btn btn-success boto" routerLink="/admin/productes/create">Nou producte</button></div>
+        </div>
+        
+        <!-- CATEGORIES -->
+               <div class="row separacio">
+
+         <div class="col-11">
+          <div  class="row separacio">
+              <div class="col-7"><h4>Lets go</h4></div>
+                    <button class="btn btn-warning col-2"> modificar</button>
+                
+                   <button class="btn btn-danger col-2 botoDel" (click)="delete(categoria.id)" >Eliminar</button>
+                </div>
+        </div>
+                   
+        </div>
+        <!-- fi categories -->
+    </div>

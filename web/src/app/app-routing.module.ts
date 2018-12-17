@@ -20,7 +20,7 @@ const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
     { path: 'login', component: LoginComponent },
-    { path: 'categories', component: CategoriaComponent,canActivate: [AuthGuard] },
+    { path: 'categories', component: CategoriaComponent },
     { path: 'categoria/:name', component: SubcategoriesComponent},
     { path: 'subcategoria/', component: SubcategoriesComponent},
     { path: 'productes/:categoria/:subcategoria', component: ProductesComponent},
@@ -28,12 +28,12 @@ const routes: Routes = [
     { path: 'producte/:name', component: ProducteDetallComponent},
     { path: 'cart', component: CarritoComponent},
     { path: 'checkout', component: CheckoutComponent},
-    { path: 'admin/categories', component: CategoriesAdminComponent},
-    { path: 'admin/categories/edit/:id', component: EditCategoriaComponent},
-    { path: 'admin/categories/create', component: EditCategoriaComponent},
-    { path: 'admin/subcategories', component: SubcategoriaAdminComponent},
-    { path: 'admin/subcategories/edit/:id', component: EditSubCategoriaComponent},
-    { path: 'admin/subcategories/create', component: EditSubCategoriaComponent},
+    { path: 'admin/categories', component: CategoriesAdminComponent, canActivate: [RoleGuard] },
+    { path: 'admin/categories/edit/:id', component: EditCategoriaComponent, canActivate: [RoleGuard] },
+    { path: 'admin/categories/create', component: EditCategoriaComponent, canActivate: [RoleGuard] },
+    { path: 'admin/subcategories', component: SubcategoriaAdminComponent, canActivate: [RoleGuard] },
+    { path: 'admin/subcategories/edit/:id', component: EditSubCategoriaComponent, canActivate: [RoleGuard] },
+    { path: 'admin/subcategories/create', component: EditSubCategoriaComponent, canActivate: [RoleGuard] },
 ];
 
 @NgModule({

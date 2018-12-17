@@ -23,8 +23,6 @@ export class EditCategoriaComponent implements OnInit {
     private routeParams : any;
     ngOnInit() {
         this.route.params.subscribe(params => {
-            console.log(params)
-
             this.routeParams = params;
             this.id = params.id;
             if(this.id != undefined){
@@ -39,6 +37,10 @@ export class EditCategoriaComponent implements OnInit {
         this.categoriaServei.getCategoria(id).subscribe(data => {
             this.categoria = data[0];
         })
+    }
+
+    tornar(id){
+        this.router.navigate(['/admin/categories']);
     }
 
 

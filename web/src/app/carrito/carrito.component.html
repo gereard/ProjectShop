@@ -1,12 +1,58 @@
-<div>
-  <div *ngFor="let producte of products" >
-    <h5>{{producte.name}}</h5>
-    <h6>{{producte.price - producte.price * producte.discount/100}} €</h6>
-    <input type="number" [ngModel]="producte.count" disabled/>
-    <i class="fas fa-plus" (click)="actionProduct('add',producte)"></i>
-    <i class="fas fa-minus" (click)="actionProduct('remove',producte)"></i>
-    <i class="fas fa-times" (click)="actionProduct('delete',producte)"></i>
+<div class="background">
+  <div class="contenidor_titol">
+    <h3><b>Carro de la compra</b></h3>
   </div>
-  <h4>Total price {{totalPrice}}</h4>
-  <button><a routerLink="/checkout">Comprar</a></button>
+  
+  <div class="contenidor_info">
+   <div class="article">
+     <h5>Article</h5>
+   </div>
+   <div class="unitats">
+     <h5>Unitats</h5>
+   </div>
+   <div class="preu">
+     <h5>Preu</h5>
+   </div>
+   
+   <div class="borrar">
+     <h5>Borrar</h5>
+   </div>
+   
+    
+  </div>
+ 
+  <div class="contenior_producte" *ngFor="let producte of products" >
+    <div class="contenidor_imatge">
+      <img [src]="producte.imatge" style='width: 100%; object-fit: contain'> 
+    </div>      
+    
+    <div class="nom">
+      <h5>{{producte.name}}</h5>
+    </div>
+    
+    <div class="cantitat">
+      <i class="fas fa-minus" (click)="actionProduct('remove',producte)"></i>    
+    
+      <input type="number" [ngModel]="producte.count" disabled/>
+
+      <i class="fas fa-plus" (click)="actionProduct('add',producte)"></i>
+    </div>
+      
+    <div class="preu_unitat">
+      <h6>{{producte.price - producte.price * producte.discount/100}} €/u</h6>
+    </div>
+       
+    <div class="treure_article">
+      <i class="fas fa-times" (click)="actionProduct('delete',producte)"></i>
+    </div>
+    
+    
+  </div>
+  
+  <div class="conenidor_pagament">
+    <h3>Preu total: {{totalPrice}}€</h3>
+    <button class="btn btn-primary"><a routerLink="/checkout">Comprar</a></button>
+  </div>
+  
+  
 </div>

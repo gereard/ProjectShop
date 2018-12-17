@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+.background{
+  height:auto;
+  width: 70%;
+  margin: 10px auto;
+  vertical-align: top;
+}
+
+.contenidor_titol{
+  border-bottom: 1px solid;
+  border-color: #4D94FF;
+}
+
+.contenior_producte{
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contenidor_imatge{
+  padding: 5px;
+  max-width: 25%;
+  display: inline-block;
+}
+
+.nom{
+  display: inline-block;
+  margin-left: 1%;
+  vertical-align:middle;
+  width: 24%;
+}
+.preu_unitat{
+  display: inline-block;
+  width: 15%;
+}
+.cantitat{
+  display: inline-block;
+  width: 30%;
+}
+input{
+  background-color: darkgrey;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+}
+.treure_article{
+  display: inline-block;
+
+}
+
+.contenior_producte{
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.contenidor_info{
+  margin-top: 10px;
+  width: 100%;
+}
+.article{
+  width: 45%;
+  display: inline-block;
+  margin-left: 5%;
+}
+.unitats{
+  width: 30%;
+  display: inline-block;
+}
+.preu{
+  width: 10%;
+  display: inline-block;
+}
+.borrar{
+  width: 9%;
+  display: inline-block;
+  padding-left: 3%;
+}
+
+.conenidor_pagament{
+  width: 40%;
+  text-align: center;
+  margin-left: 30%;
+}
+
+.btn{
+  color: white;
+  width: 60%;
+  padding: .875rem .75rem;
+}
+
+.btn-primary:hover{
+  color: white;
+  background-color: darkblue;
+}
+
+a{
+  color: white;
+}

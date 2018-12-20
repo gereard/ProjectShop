@@ -1,12 +1,10 @@
 .contenidorPerfil {
-    /*background-color:blue;*/
     width: 50%;
     height:100%;
     margin: auto;
     margin-top: 40px;
 }
 .contenidorTitol {
-    /*background-color:blue;*/
     width: 100%;
     margin: auto;
     border-bottom: 1px solid;
@@ -17,15 +15,17 @@
     margin: auto;
     margin-top: 40px;
 }
-.llistaInputs h4{
-    /*text-align: center;*/
-}
 
 .separacio{
     margin-top: 20px;
 }
 .boto{
     margin: 20px 20px 20px 20px;
+}
+.btn-info {
+color: #fff !important;
+background-color: #17a2b8 !important;
+border-color: #17a2b8 !important;
 }
 .marge{
     margin-left: 15px;

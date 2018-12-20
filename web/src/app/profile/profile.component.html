@@ -6,19 +6,19 @@
 	<p class="alert-danger" *ngIf="errorEditing" >No estàn correctes les dades</p>
     <div class="llistaInputs">
         <div class="row separacio">
-          <div class="col-md-5 col-md-pull-7"><h4>Nom i cognoms</h4></div>
-          <div class="col-md-7 col-md-push-5">
+          <div class="col-md-5 "><h4>Nom i cognoms</h4></div>
+          <div class="col-md-push-5">
 			  <input type="text" class="form-control" id="nom"  [(ngModel)]="user.name" aria-describedby="" placeholder="Nou nom">
 		  </div>
         </div>
         <div class="row separacio">
-          <div class="col-md-5 col-md-pull-7"><h4>Email</h4></div>
-          <div class="col-md-7 col-md-push-5">
+          <div class="col-md-5 "><h4>Email</h4></div>
+          <div class="col-md-push-5">
 			  <input type="email" class="form-control" id="email" [(ngModel)]="user.email" aria-describedby="" placeholder="Nou email"></div>
         </div>
         <div class="row separacio">
-          <div class="col-md-5 col-md-pull-7"><h4>País</h4></div>
-          <div class="col-md-7 col-md-push-5"><select class="form-control" [(ngModel)]="user.pais" >
+          <div class="col-md-5 "><h4>País</h4></div>
+          <div class="col-md-push-5"><select class="form-control" [(ngModel)]="user.pais" >
 	<option value="AF">Afghanistan</option>
 	<option value="AX">Åland Islands</option>
 	<option value="AL">Albania</option>
@@ -272,32 +272,61 @@
 		  </div>
         </div>
         <div class="row separacio">
-          <div class="col-md-5 col-md-pull-7"><h4>Ciutat</h4></div>
-          <div class="col-md-7 col-md-push-5">
+          <div class="col-md-5 "><h4>Ciutat</h4></div>
+          <div class="col-md-push-5">
 			  <input type="text" class="form-control" id="ciutat" [(ngModel)]="user.ciutat" aria-describedby="" placeholder="Nova ciutat"></div>
         </div>
         <div class="row separacio">
-          <div class="col-md-5 col-md-pull-7"><h4>Direcció</h4></div>
-          <div class="col-md-7 col-md-push-5"><input type="text" class="form-control" id="direccio" [(ngModel)]="user.direccio" aria-describedby="" placeholder="Nova direcció"></div>
+          <div class="col-md-5 "><h4>Direcció</h4></div>
+          <div class="col-md-push-5"><input type="text" class="form-control" id="direccio" [(ngModel)]="user.direccio" aria-describedby="" placeholder="Nova direcció"></div>
         </div>
         <div class="row separacio">
-          <div class="col-md-5 col-md-pull-7"><h4>Codi postal</h4></div>
-          <div class="col-md-7 col-md-push-5">
+          <div class="col-md-5 "><h4>Codi postal</h4></div>
+          <div class="col-md-push-5">
 			  <input type="text" class="form-control" id="cp" [(ngModel)]="user.cp" aria-describedby="" placeholder="Nou codi"></div>
-          
-          
-          <button class="btn btn-info marge separacio" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          </div>
+          <div class="row separacio">
+          <button class="btn btn-info marge separacio" type="button" data-toggle="modal" data-target="#myModal">
                 Canviar contrasenya
           </button>
-            <div class="collapse separacio" id="collapseExample">
-            <div class="card card-body">
-            <input type="password" class="form-control separacio" id="new" [(ngModel)]="user.password"  aria-describedby="" placeholder="Nova contrasenya">
-
-            <input type="password" class="form-control separacio" id="repeat"  [(ngModel)]="user.repeated" aria-describedby="" placeholder="Repetir contrasenya">
-  </div>
-</div>
+            <div class="collapse separacio" id="dropdown-menu">
+            
+           
           
         </div>
+        
+
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+              <div class="modal-dialog">
+                <div class="modal-content">
+
+                  <!-- Modal Header -->
+                  <div class="modal-header">
+                    <h4 class="modal-title">Canviar contrasenya</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                   <div class="card card-body">
+                        <input type="password" class="form-control separacio" id="new" [(ngModel)]="user.password"  aria-describedby="" placeholder="Nova contrasenya">
+
+                        <input type="password" class="form-control separacio" id="repeat"  [(ngModel)]="user.repeated" aria-describedby="" placeholder="Repetir contrasenya">
+
+            </div>
+                  </div>
+
+                  <!-- Modal footer -->
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Tancar</button>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+       
+        
         
     </div>
     

@@ -21,6 +21,9 @@ import { EditCategoriaComponent } from './edit-categoria/edit-categoria.componen
 import { EditSubCategoriaComponent } from './edit-sub-categoria/edit-sub-categoria.component';
 import { SubcategoriaAdminComponent } from './subcategoria-admin/subcategoria-admin.component';
 import { HomeComponent } from './home/home.component';
+import { AdminProductesComponent } from './admin-productes/admin-productes.component';
+import { EditProductesComponent } from './edit-productes/edit-productes.component';
+import { CotrolPanelComponent } from './cotrol-panel/cotrol-panel.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { HomeComponent } from './home/home.component';
     EditSubCategoriaComponent,
     SubcategoriaAdminComponent,
     HomeComponent,
+    AdminProductesComponent,
+    EditProductesComponent,
+    CotrolPanelComponent,
   ],
   imports: [
     BrowserModule,

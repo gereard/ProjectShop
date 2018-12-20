@@ -5,7 +5,7 @@
    <div class="primer">
       <nav class="navbar navbar-default" role="navigation" style="bottom: 4px !important">
          <div class="navbar-header" id="open">
-           <i class="fas fa-user-tie fa-3x" style="padding-right: 20px !important;"></i>
+           <i [routerLink]="['/admin/menu']"  *ngIf="user.role == 1" class="fas fa-user-tie fa-3x" style="padding-right: 20px !important;"></i>
             <button href="#" class="c-main-header__trigger qa-menu-button mkt-trigger-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-bars fa-3x"></i>
             </button>

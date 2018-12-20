@@ -13,32 +13,18 @@
                   <h3 class="c-main-menu__name">TODAS LAS SECCIONES</h3>
                </div>
                <ul class="c-main-menu__superlist">
-                  <li class="c-main-menu__superitem" data-pcc-trigger="toggle-menu-bg" data-pcc-event="hover" data-pcc-group="menu-bg">
-                     <a id="GTM-superfamilia-1"  class="c-main-menu__superlink c-main-menu__superlink--1 mkt-menu-level1" title="Componentes">
-                     Componentes
+                  <li *ngFor="let categoria of categories"  class="c-main-menu__superitem" data-pcc-trigger="toggle-menu-bg" data-pcc-event="hover" data-pcc-group="menu-bg">
+                     <a [routerLink]="['/categoria', categoria.name]" id="GTM-superfamilia-1"  class="c-main-menu__superlink c-main-menu__superlink--1 mkt-menu-level1" title="Componentes">
+                     {{categoria.name}}
                      </a><span class="c-main-menu__super-trigger mkt-menu-level1" data-pcc-trigger="toggle-superfamilia-1" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" aria-hidden="true"></span>
                      <div class="c-main-menu__superblock c-main-menu__superblock--1" data-pcc-listen="toggle-superfamilia-1" data-pcc-class="is-active" data-pcc-group="superfamilias-desplegables" data-pcc-active="0" data-pcc-id-listener="5">
                         <div class="c-main-menu__top-bar c-main-menu__top-bar--sub">
-                           <h4 class="c-main-menu__name"><a class="mkt-menu-level1"  title="Componentes">Componentes</a></h4>
+                           <h4 class="c-main-menu__name"><a class="mkt-menu-level1"  title="Componentes">{{categoria.name}}</a></h4>
                            <span role="button" class="c-main-menu__toggle" data-pcc-trigger="toggle-superfamilia-1" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" aria-hidden="true">0</span>
                         </div>
                         <ul class="c-main-menu__catlist">
-                           <li class="c-main-menu__catname">
-                              Pc a Medida
-                           </li>
-                           <li class="c-main-menu__catitem"><a class="c-main-menu__catlink mkt-menu-level3"  title="Configurador de PCs">Configurador de PCs
-                              <span title="Destacado" class="c-icon c-icon--outstanding-main-menu" aria-hidden="true"></span></a>
-                           </li>
-                        </ul>
-                        <ul class="c-main-menu__catlist">
-                           <li class="c-main-menu__catname">
-                        </ul>
-                        <ul class="c-main-menu__catlist">
-                           <li class="c-main-menu__catname">
-                              Sistemas Operativos
-                           </li>
-                           <li class="c-main-menu__catitem"><a class="c-main-menu__catlink mkt-menu-level3"  title="Sistemas operativos">Sistemas operativos
-                              </a>
+                           <li *ngFor="let subcategoria of categoria.subcategories" class="c-main-menu__catname" [routerLink]="['/productes/',categoria.name, subcategoria.name]">
+                              {{subcategoria.name}}
                            </li>
                         </ul>
                      </div>

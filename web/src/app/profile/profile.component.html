@@ -3,33 +3,22 @@
         <h3>DETALL <b>USUARI</b></h3>
     </div>
 
-	<p class="alert-danger" *ngIf="errorEditing" >No estàn correctes les dades</p>
+	<p style="color:red;" *ngIf="errorEditing">No estàn correctes les dades</p>
     <div class="llistaInputs">
         <div class="row separacio">
           <div class="col-md-5 "><h4>Nom i cognoms</h4></div>
-
-          <div class=" col-md-push-5">
           <div class="col-md-push-5">
-
 			  <input type="text" class="form-control" id="nom"  [(ngModel)]="user.name" aria-describedby="" placeholder="Nou nom">
 		  </div>
         </div>
         <div class="row separacio">
           <div class="col-md-5 "><h4>Email</h4></div>
-
-          <div class=" col-md-push-5">
-
           <div class="col-md-push-5">
-
 			  <input type="email" class="form-control" id="email" [(ngModel)]="user.email" aria-describedby="" placeholder="Nou email"></div>
         </div>
         <div class="row separacio">
           <div class="col-md-5 "><h4>País</h4></div>
-
-          <div class=" col-md-push-5"><select class="form-control" [(ngModel)]="user.pais" >
-
-  
-
+          <div class="col-md-push-5"><select class="form-control" [(ngModel)]="user.pais" >
 	<option value="AF">Afghanistan</option>
 	<option value="AX">Åland Islands</option>
 	<option value="AL">Albania</option>
@@ -284,28 +273,16 @@
         </div>
         <div class="row separacio">
           <div class="col-md-5 "><h4>Ciutat</h4></div>
-
-          <div class=" col-md-push-5">
-
           <div class="col-md-push-5">
-
 			  <input type="text" class="form-control" id="ciutat" [(ngModel)]="user.ciutat" aria-describedby="" placeholder="Nova ciutat"></div>
         </div>
         <div class="row separacio">
           <div class="col-md-5 "><h4>Direcció</h4></div>
-
-          <div class=" col-md-push-5"><input type="text" class="form-control" id="direccio" [(ngModel)]="user.direccio" aria-describedby="" placeholder="Nova direcció"></div>
-        </div>
-        <div class="row separacio">
-          <div class="col-md-5 "><h4>Codi postal</h4></div>
-          <div class=" col-md-push-5">
-
           <div class="col-md-push-5"><input type="text" class="form-control" id="direccio" [(ngModel)]="user.direccio" aria-describedby="" placeholder="Nova direcció"></div>
         </div>
         <div class="row separacio">
           <div class="col-md-5 "><h4>Codi postal</h4></div>
           <div class="col-md-push-5">
-
 			  <input type="text" class="form-control" id="cp" [(ngModel)]="user.cp" aria-describedby="" placeholder="Nou codi"></div>
           </div>
           <div class="row separacio">
@@ -365,4 +342,4 @@
 
     
     
-</div>
+</div>	

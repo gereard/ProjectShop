@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {AuthenticationService} from "../auth/authentication.service";
+import {CategoriaService} from "../categoria/categoria.service";
 
 @Component({
   selector: 'app-header',
@@ -10,9 +11,12 @@ import {AuthenticationService} from "../auth/authentication.service";
 export class HeaderComponent implements OnInit {
 
   constructor( private router: Router,
-               private authenticationService: AuthenticationService) {}
+               private categoriaServei: CategoriaService,
+    private authenticationService: AuthenticationService) {}
     logged = false;
     user = <any>[];
+    categories = [];
+    subcategories = [];
 
     ngOnInit() {
       if (localStorage.getItem('currentUser')) {
@@ -22,6 +26,15 @@ export class HeaderComponent implements OnInit {
               this.logged =  true;
           })
       }
+        this.categoriaServei.getCategories().subscribe(data =>{
+            this.categories = data;
+        })
+  }
+
+  getSubcategories(name){
+      this.categoriaServei.getCategoria(name).subscribe(data =>{
+          this.subcategories = data[0].subcategories;
+      })
   }
 
   logout(){

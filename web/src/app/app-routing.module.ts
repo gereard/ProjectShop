@@ -22,7 +22,7 @@ import {RoleGuard} from "./auth/role.guard";
 
 const routes:    Routes = [
     { path: '', component: HomeComponent },
-    { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
+    { path: 'profile', component: ProfileComponent},
     { path: 'login', component: LoginComponent },
     { path: 'categories', component: CategoriaComponent },
     { path: 'categoria/:name', component: SubcategoriesComponent},

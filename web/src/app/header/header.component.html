@@ -4,11 +4,13 @@
    </a>
    <div class="primer">
       <nav class="navbar navbar-default" role="navigation" style="bottom: 4px !important">
-         <div class="navbar-header" id="open">
-           <i [routerLink]="['/admin/menu']"  *ngIf="user.role == 1" class="fas fa-user-tie fa-3x" style="padding-right: 20px !important;"></i>
-            <button href="#" class="c-main-header__trigger qa-menu-button mkt-trigger-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        <button href="#" class="c-main-header__trigger qa-menu-button mkt-trigger-menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             <i class="fa fa-bars fa-3x"></i>
             </button>
+         <a *ngIf="user.role == 1"  style="padding-top: 25px !important;">ADMIN</a>
+         <i [routerLink]="['/admin/menu']" *ngIf="user.role == 1" class="fas fa-user-tie fa-3x" style="padding-right: 20px !important;"></i>
+         <div class="navbar-header" id="open">          
+           
             <ul class="dropdown-menu">
                <div class="c-main-menu__top-bar">
                   <h3 class="c-main-menu__name">TODAS LAS SECCIONES</h3>
@@ -38,7 +40,7 @@
          </form>
       </nav>
    </div>
-   <ul class="navbar-nav-icons">
+   <ul class="navbar-nav-icons" style="margin-right: 0px !important;">
       <a style="margin-right: 15px;" *ngIf="!logged" routerLink="/login">
       <i class="fa fa-sign-in fa-2x"></i> Login</a>
       <a *ngIf="logged" (click)="logout()"><i class="fa fa-sign-out fa-2x"></i> Logout</a>

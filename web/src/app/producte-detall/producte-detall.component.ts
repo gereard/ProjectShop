@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {ProducteDetallService} from "./producte-detall.service";
 
 @Component({
@@ -11,7 +11,8 @@ export class ProducteDetallComponent implements OnInit {
 
     constructor(
         private route: ActivatedRoute,
-        private producteDetallServei: ProducteDetallService
+        private producteDetallServei: ProducteDetallService,
+        private router: Router,
     ) {}
 
     private sub: any;
@@ -40,6 +41,21 @@ export class ProducteDetallComponent implements OnInit {
         a.push(this.producte.id);
 
         localStorage.setItem('productes', JSON.stringify(a));
+
+    }
+
+    addCartComprar(){
+        var a = [];
+
+        if(localStorage.getItem('productes') !== null){
+            a = JSON.parse(localStorage.getItem('productes'));
+        }
+        console.log(this.producte.id);
+        a.push(this.producte.id);
+
+        localStorage.setItem('productes', JSON.stringify(a));
+
+        this.router.navigate(['/cart']);
 
     }
 

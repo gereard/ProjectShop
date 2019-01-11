@@ -43,6 +43,8 @@ Route::get('subcategories/delete/{id}', 'Controller\CategoriaController@destroyS
 Route::get('orders/getAll', 'Controller\OrderController@getAll');
 Route::get('orders/{idUser}', 'Controller\OrderController@indexUser');
 Route::get('order/{idOrder}', 'Controller\OrderController@getOrder');
+Route::post('productes/finalitzarCompra', 'Controller\OrderController@finalitzarCompra');
+
 
 
 

@@ -18,6 +18,7 @@ export class ProducteDetallComponent implements OnInit {
     private sub: any;
     private routeParams : any;
 
+    afegit  = false;
 
     producte = <any>[];
     ngOnInit() {
@@ -26,7 +27,6 @@ export class ProducteDetallComponent implements OnInit {
         });
         this.producteDetallServei.getProducte(this.routeParams.name).subscribe(data => {
             this.producte = data[0];
-            console.log(this.producte)
         })
     }
 
@@ -41,7 +41,7 @@ export class ProducteDetallComponent implements OnInit {
         a.push(this.producte.id);
 
         localStorage.setItem('productes', JSON.stringify(a));
-
+        this.afegit  = true;
     }
 
     addCartComprar(){

@@ -32,7 +32,6 @@ export class CheckoutComponent implements OnInit {
         let storage =  JSON.parse(localStorage.getItem('currentUser'));
         this.auth.getUser(storage.token).subscribe(data =>{
             this.user = data;
-            console.log(this.user);
             this.order.idClient = this.user.id;
             this.order.direccio = this.user.direccio;
             this.order.codiPostal = this.user.cp;
@@ -72,14 +71,12 @@ export class CheckoutComponent implements OnInit {
 
         let obj = Object.assign({}, this.order);
         this.producteDetallServei.finalitzarComprar(obj).subscribe((data => {
-
-            console.log(data)
             if(data.errorMessage.length > 0){
                 this.order = data;
                 this.errorStock = true;
             }else{
                 this.router.navigate(['/user/orders']);
-
+                localStorage.removeItem('productes')
             }
         }));
     }

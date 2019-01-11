@@ -16,7 +16,6 @@ export class RoleGuard implements CanActivate {
         let user =  JSON.parse(localStorage.getItem('currentUser'));
         if (localStorage.getItem('currentUser')) {
             this.auth.roleToken(user.token).subscribe(data =>{
-                console.log(data)
                 if(data.admin){
                     return true;
                 }

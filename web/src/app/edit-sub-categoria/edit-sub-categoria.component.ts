@@ -68,7 +68,6 @@ export class EditSubCategoriaComponent implements OnInit {
             return
         }
 
-        console.log(this.subcategoria.idCategoria);
         if(this.subcategoria.idCategoria == null || isNaN(this.subcategoria.idCategoria)){
             this.errorCategoria = true;
             return

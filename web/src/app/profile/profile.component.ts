@@ -21,7 +21,6 @@ export class ProfileComponent implements OnInit {
     let storage =  JSON.parse(localStorage.getItem('currentUser'));
       this.auth.getUser(storage.token).subscribe(data =>{
           this.user = data;
-          console.log(this.user);
       },error => {
           this.router.navigate(['']);
       })
@@ -44,10 +43,8 @@ export class ProfileComponent implements OnInit {
         .pipe(first())
         .subscribe(
             data => {
-                console.log(data);
             },
             error => {
-                console.log(error);
                 if(error.error){
                     this.errorEditing = true;
                 }

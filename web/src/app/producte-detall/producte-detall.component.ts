@@ -37,7 +37,6 @@ export class ProducteDetallComponent implements OnInit {
         if(localStorage.getItem('productes') !== null){
             a = JSON.parse(localStorage.getItem('productes'));
         }
-        console.log(this.producte.id);
         a.push(this.producte.id);
 
         localStorage.setItem('productes', JSON.stringify(a));
@@ -50,7 +49,6 @@ export class ProducteDetallComponent implements OnInit {
         if(localStorage.getItem('productes') !== null){
             a = JSON.parse(localStorage.getItem('productes'));
         }
-        console.log(this.producte.id);
         a.push(this.producte.id);
 
         localStorage.setItem('productes', JSON.stringify(a));

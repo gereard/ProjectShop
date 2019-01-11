@@ -40,6 +40,12 @@ Route::post('categories/save', 'Controller\CategoriaController@saveCategory');
 Route::post('subcategories/save', 'Controller\CategoriaController@saveSubcategory');
 Route::get('categories/delete/{id}', 'Controller\CategoriaController@destroy');
 Route::get('subcategories/delete/{id}', 'Controller\CategoriaController@destroySubcategoria');
+Route::get('orders/getAll', 'Controller\OrderController@getAll');
+Route::get('orders/{idUser}', 'Controller\OrderController@indexUser');
+Route::get('order/{idOrder}', 'Controller\OrderController@getOrder');
+
+
+
 
 
 

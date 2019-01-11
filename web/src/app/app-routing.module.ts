@@ -18,11 +18,15 @@ import {HomeComponent} from "./home/home.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {AuthGuard} from "./auth/auth.guard";
 import {RoleGuard} from "./auth/role.guard";
+import {UsuariComponent} from "./usuari/usuari.component";
+import {OrdersUsuariComponent} from "./orders-usuari/orders-usuari.component";
+import {OrdersDetallComponent} from "./orders-detall/orders-detall.component";
+import {OrdersAdminComponent} from "./orders-admin/orders-admin.component";
 
 
 const routes:    Routes = [
-    { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
-    { path: 'profile', component: ProfileComponent},
+    { path: '', component: HomeComponent },
+    { path: 'user/profile', component: ProfileComponent, canActivate: [AuthGuard]},
     { path: 'login', component: LoginComponent },
     { path: 'categories', component: CategoriaComponent },
     { path: 'categoria/:name', component: SubcategoriesComponent},
@@ -42,6 +46,12 @@ const routes:    Routes = [
     { path: 'admin/productes', component: AdminProductesComponent},
     { path: 'admin/productes/create', component: EditProductesComponent},
     { path: 'admin/productes/edit/:id', component: EditProductesComponent},
+    { path: 'user/menu', component: UsuariComponent, canActivate: [AuthGuard]},
+    { path: 'user/orders', component: OrdersUsuariComponent, canActivate: [AuthGuard]},
+    { path: 'admin/orders', component: OrdersAdminComponent, canActivate: [AuthGuard]},
+    { path: 'user/orders/:id', component: OrdersDetallComponent, canActivate: [AuthGuard]},
+    { path: 'admin/orders/:id', component: OrdersDetallComponent, canActivate: [AuthGuard]},
+
 
 ];
 

@@ -28,6 +28,10 @@ export class ProfileComponent implements OnInit {
   }
 
 
+    tornar(id){
+        this.router.navigate(['/user/menu']);
+    }
+
     saveUser(){
 
       if(this.user.password != this.user.repeated){

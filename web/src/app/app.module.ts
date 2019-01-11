@@ -24,6 +24,10 @@ import { HomeComponent } from './home/home.component';
 import { AdminProductesComponent } from './admin-productes/admin-productes.component';
 import { EditProductesComponent } from './edit-productes/edit-productes.component';
 import { CotrolPanelComponent } from './cotrol-panel/cotrol-panel.component';
+import { UsuariComponent } from './usuari/usuari.component';
+import { OrdersUsuariComponent } from './orders-usuari/orders-usuari.component';
+import { OrdersDetallComponent } from './orders-detall/orders-detall.component';
+import { OrdersAdminComponent } from './orders-admin/orders-admin.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +50,10 @@ import { CotrolPanelComponent } from './cotrol-panel/cotrol-panel.component';
     AdminProductesComponent,
     EditProductesComponent,
     CotrolPanelComponent,
+    UsuariComponent,
+    OrdersUsuariComponent,
+    OrdersDetallComponent,
+    OrdersAdminComponent,
   ],
   imports: [
     BrowserModule,

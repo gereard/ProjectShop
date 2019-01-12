@@ -28,6 +28,8 @@ import { UsuariComponent } from './usuari/usuari.component';
 import { OrdersUsuariComponent } from './orders-usuari/orders-usuari.component';
 import { OrdersDetallComponent } from './orders-detall/orders-detall.component';
 import { OrdersAdminComponent } from './orders-admin/orders-admin.component';
+import { ContacteComponent } from './contacte/contacte.component';
+import { QuisomComponent } from './quisom/quisom.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,8 @@ import { OrdersAdminComponent } from './orders-admin/orders-admin.component';
     OrdersUsuariComponent,
     OrdersDetallComponent,
     OrdersAdminComponent,
+    ContacteComponent,
+    QuisomComponent,
   ],
   imports: [
     BrowserModule,

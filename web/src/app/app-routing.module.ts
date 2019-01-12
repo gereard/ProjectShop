@@ -22,6 +22,8 @@ import {UsuariComponent} from "./usuari/usuari.component";
 import {OrdersUsuariComponent} from "./orders-usuari/orders-usuari.component";
 import {OrdersDetallComponent} from "./orders-detall/orders-detall.component";
 import {OrdersAdminComponent} from "./orders-admin/orders-admin.component";
+import {QuisomComponent} from "./quisom/quisom.component";
+import {ContacteComponent} from "./contacte/contacte.component";
 
 
 const routes:    Routes = [
@@ -51,6 +53,8 @@ const routes:    Routes = [
     { path: 'admin/orders', component: OrdersAdminComponent, canActivate: [AuthGuard]},
     { path: 'user/orders/:id', component: OrdersDetallComponent, canActivate: [AuthGuard]},
     { path: 'admin/orders/:id', component: OrdersDetallComponent, canActivate: [AuthGuard]},
+    { path: 'quisom', component: QuisomComponent},
+    { path: 'contacte', component: ContacteComponent},
 
 
 ];

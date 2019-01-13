@@ -1,13 +1,18 @@
 <div class="background">
     <div *ngIf="afegit" class="alert alert-dismissible alert-success">
-        <button type="button" class="close" data-dismiss="alert">&times;</button>
-        <strong>Ben fet!</strong> Has afegit el producte al carro.
+          
+       <div class="alert alert-success afegir" role="alert">
+        <!-- BOTO PER OCULAR L ALERTA -->
+      <!--<button type="button" class="close" data-dismiss="alert">&times;</button>-->
+           <h2><strong>Ben fet!</strong> Has afegit <a href="#" class="alert-link">{{producte.name}} al carro</a>.</h2>
+           
+           
+        </div>
     </div>
   <div class="contenidor_imatge">
    <!-- src="https://img.pccomponentes.com/articles/13/135336/1.jpg" -->
      <img [src]="producte.imatge" style='width: 100%; object-fit: contain'>
   </div>
-  
   <div class="contenidor_info">
    <div class="contenidro_preu"> 
     <div>

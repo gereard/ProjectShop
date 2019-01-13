@@ -30,6 +30,8 @@ import { OrdersDetallComponent } from './orders-detall/orders-detall.component';
 import { OrdersAdminComponent } from './orders-admin/orders-admin.component';
 import { ContacteComponent } from './contacte/contacte.component';
 import { QuisomComponent } from './quisom/quisom.component';
+import { AdminContactComponent } from './admin-contact/admin-contact.component';
+import { DetallContactComponent } from './detall-contact/detall-contact.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,8 @@ import { QuisomComponent } from './quisom/quisom.component';
     OrdersAdminComponent,
     ContacteComponent,
     QuisomComponent,
+    AdminContactComponent,
+    DetallContactComponent,
   ],
   imports: [
     BrowserModule,

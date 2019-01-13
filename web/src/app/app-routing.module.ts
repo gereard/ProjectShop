@@ -24,6 +24,8 @@ import {OrdersDetallComponent} from "./orders-detall/orders-detall.component";
 import {OrdersAdminComponent} from "./orders-admin/orders-admin.component";
 import {QuisomComponent} from "./quisom/quisom.component";
 import {ContacteComponent} from "./contacte/contacte.component";
+import {AdminContactComponent} from "./admin-contact/admin-contact.component";
+import {DetallContactComponent} from "./detall-contact/detall-contact.component";
 
 
 const routes:    Routes = [
@@ -55,8 +57,8 @@ const routes:    Routes = [
     { path: 'admin/orders/:id', component: OrdersDetallComponent, canActivate: [AuthGuard]},
     { path: 'quisom', component: QuisomComponent},
     { path: 'contacte', component: ContacteComponent},
-
-
+    { path: 'admin/messages', component: AdminContactComponent, canActivate: [AuthGuard]},
+    { path: 'admin/message/:id', component: DetallContactComponent, canActivate: [AuthGuard]},
 ];
 
 @NgModule({

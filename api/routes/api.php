@@ -44,6 +44,11 @@ Route::get('orders/getAll', 'Controller\OrderController@getAll');
 Route::get('orders/{idUser}', 'Controller\OrderController@indexUser');
 Route::get('order/{idOrder}', 'Controller\OrderController@getOrder');
 Route::post('productes/finalitzarCompra', 'Controller\OrderController@finalitzarCompra');
+Route::post('contact/create', 'Controller\ContactController@create');
+Route::get('contact/get', 'Controller\ContactController@index');
+Route::get('contact/getMessage/{id}', 'Controller\ContactController@getMessage');
+
+
 
 
 

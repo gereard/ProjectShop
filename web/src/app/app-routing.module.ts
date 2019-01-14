@@ -30,13 +30,13 @@ import {DetallContactComponent} from "./detall-contact/detall-contact.component"
 
 const routes:    Routes = [
     { path: '', component: HomeComponent },
+    { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
     { path: 'user/profile', component: ProfileComponent, canActivate: [AuthGuard]},
     { path: 'login', component: LoginComponent },
     { path: 'categories', component: CategoriaComponent },
     { path: 'categoria/:name', component: SubcategoriesComponent},
     { path: 'subcategoria/', component: SubcategoriesComponent},
     { path: 'productes/:categoria/:subcategoria', component: ProductesComponent},
-    { path: 'producte/:name', component: ProducteDetallComponent},
     { path: 'producte/:name', component: ProducteDetallComponent},
     { path: 'cart', component: CarritoComponent},
     { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard]},

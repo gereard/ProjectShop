@@ -24,6 +24,9 @@ class ProducteController extends Controller
         return Producte::take(4)->get();
 
     }
+    public function getAll(){
+        return Producte::get();
+    }
 
     public function finalStock()
     {
@@ -35,9 +38,29 @@ class ProducteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         //
+        $producte = new Producte();
+        $producte->name = $request->name;
+        $producte->description = $request->description;
+        $producte->price = $request->price;
+        $producte->discount = $request->discount;
+        $producte->idCategory = $request->idCategory*1;
+        $producte->idSubcategoria = $request->idSubcategoria;
+        $producte->stock = $request->stock;
+        $producte->imatge = $request->imatge;
+
+        $producte->save();
+
+        return $producte;
+    }
+    public function saveProducte(Request $request){
+        if(isset($request->id)){
+           return $this->update($request);
+        }else{
+           return $this->create($request);
+        }
     }
 
     /**
@@ -108,11 +131,27 @@ class ProducteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         //
-    }
+        $obj =  $request->all();
 
+        $producte = Producte::find($obj["id"]);
+        $producte->name = $request->name;
+        $producte->description = $request->description;
+        $producte->price = $request->price;
+        $producte->discount = $request->discount;
+        $producte->idCategory = (int)$request->idCategory;
+        $producte->idSubcategoria = (int)$request->idSubcategoria;
+        $producte->stock = $request->stock;
+        $producte->imatge = $request->imatge;
+        $producte->save();
+        return $producte;
+    }
+       public function getProducte($id)
+    {
+        return Producte::whereId($id)->get();
+    }
     /**
      * Remove the specified resource from storage.
      *
@@ -121,7 +160,9 @@ class ProducteController extends Controller
      */
     public function destroy($id)
     {
-
+        $producte =  Producte::find($id);
+        $producte->delete();
+        return $this->index();
 
     }
 }

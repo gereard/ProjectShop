@@ -3,7 +3,7 @@
         <h3>DETALL <b>USUARI</b></h3>
     </div>
 
-	<p style="color:red;" *ngIf="errorEditing">No estàn correctes les dades</p>
+	
     <div class="llistaInputs">
         <div class="row separacio">
           <div class="col-md-5 "><h4>Nom i cognoms</h4></div>
@@ -332,6 +332,9 @@
     
     <div class="contenidorTitol">
         <h3>&nbsp;</h3>
+          <div class="alert alert-dismissible alert-danger" *ngIf="errorEditing">  <strong>No estàn correctes les dades!</strong> <button type="button" class="close" data-dismiss="alert">&times;</button></div>
+          <div class="alert alert-dismissible alert-success" *ngIf="saveCorrect">  <strong>S'han desat correctement les dades!</strong> <button type="button" class="close" data-dismiss="alert">&times;</button></div>
+        
     </div>
     
     <button type="button" (click)="tornar()" class="btn btn-danger boto">Cancel·lar</button>

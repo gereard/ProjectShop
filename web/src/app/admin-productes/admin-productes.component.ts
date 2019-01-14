@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ProducteServiceService} from "../adminProductes/producte-service.service";
+import {Router} from "@angular/router";
 @Component({
   selector: 'app-admin-productes',
   templateUrl: './admin-productes.component.html',
@@ -8,7 +9,8 @@ import {ProducteServiceService} from "../adminProductes/producte-service.service
 export class AdminProductesComponent implements OnInit {
 
   constructor(
-		private productesServei: ProducteServiceService
+      private router: Router,
+      private productesServei: ProducteServiceService
   ) { }
 
    productes = <any>[];
@@ -28,6 +30,9 @@ export class AdminProductesComponent implements OnInit {
     })
   }
 
+    tornar(){
+        this.router.navigate(['/admin/menu']);
+    }
 
   getProductes(){
       this.productesServei.getProductes().subscribe(data => {

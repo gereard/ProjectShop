@@ -1,7 +1,6 @@
 .contenidorPerfil {
     /*background-color:blue;*/
     width: 50%;
-    height:100%;
     margin: auto;
     margin-top: 40px;
 }
@@ -23,6 +22,7 @@
 
 .separacio{
     margin-top: 20px;
+    width:100%;
 }
 .boto{
     font-size: large;
@@ -50,4 +50,17 @@
 .blanc{
     color: #ffffff!important;
 
+}
+
+.llistaInputs{
+  display: inline-block;
+}
+
+.separacio{
+    display: inline-block;
+}
+
+.btn{
+  width: 100%;
+  text-align: center;
 }

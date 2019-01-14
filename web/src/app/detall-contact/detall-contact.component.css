@@ -1,0 +1,19 @@
+.background{
+  height:auto;
+  width: 60%;
+  margin: 10px auto;
+  vertical-align: top;
+}
+
+.titol_pagina{
+  border-bottom: 1px solid;
+  border-color: #4D94FF;
+}
+.contingut{
+  font-size: 20px;
+}
+
+
+.endarrere{
+  margin-left: 44%;
+}

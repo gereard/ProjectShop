@@ -1,10 +1,18 @@
-<div class="row separacio">
-  <div class="col-4">
+
+<div class="background">
+ <div class="titol_pagina">
+   <h3>{{message.subject}}</h3>
+ </div>
+ 
+ <div class="contingut">
+   <div><strong>Nom: </strong>{{message.name}}</div>
+   <div><strong>E-mail: </strong>{{message.email}}</div>
+   <div><strong>Telèfon: </strong>{{message.telefon}}</div>
+   <div><strong>Missatge: </strong>{{message.message}}</div>    
+ </div>
+ 
+ <div class="endarrere">
     <button class="btn btn-success" (click)="tornar()">Tornar</button>
   </div>
+
 </div>
-{{message.email}}
-{{message.name}}
-{{message.subject}}
-{{message.message}}
-{{message.telefon}}

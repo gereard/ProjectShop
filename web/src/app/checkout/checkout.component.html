@@ -1,18 +1,35 @@
-<div class="contenior_producte" *ngFor="let producte of order.products" >
-  <div class="nom">
-    <h5>{{producte.name}}</h5>
+  
+<div class="background">
+   <div class="contenidor_titol">
+    <h3><b>Detall de la comanda</b></h3>
   </div>
-  <div class="cantitat">
-    <input type="number" [ngModel]="producte.count" disabled/>
-  </div>
+  
+  
+  <div class="contenidor_productes">
+    <div class="contenior_producte" *ngFor="let producte of order.products" >
+    <div class="nom">
+      <h5>{{producte.name}}</h5>
+    </div>
+    <div class="cantitat">
+      <h5 class="qtt_prod">Quantitat: </h5>
+      <input class="qtt_prod_show" type="number" [ngModel]="producte.count" disabled/>
+    </div>
 
+    </div>
+    
+    <div class="preu_final">
+      <h4>Preu total: </h4>
+      <h4>codi per el preu</h4>
+      <h4> €</h4>
+    </div>
+    
 </div>
-
 <div class="contenidorPerfil">
   <div class="row separacio">
     <div class="col-md-5 "><h4>Direcció</h4></div>
     <div class="col-7">
-      <input type="text" class="form-control col-md-5" name="direcció" [(ngModel)]="order.direccio">
+      <textarea type="text" class="form-control col-md-12" name="direcció" [(ngModel)]="order.direccio">
+      </textarea>
     </div>
 
   </div>
@@ -34,8 +51,11 @@
   <p *ngIf="errorCP">El codi postal no pot ser inferior a 3 caràcters</p>
   <p *ngIf="errorDireccio">La direcció no pot ser inferior a 3 caràcters</p>
   <p *ngIf="errorStock">{{order.errorMessage}}</p>
-  <div class="row separacio">
-    <button type="button" class="btn btn-success" (click)="comprar()">Guardar</button>
-    <button type="button" class="btn btn-light" (click)="tornar()">Tornar</button>
+  <div class="row separacio botons_compra">
+    <button type="button" class="btn btn-success" (click)="comprar()">PAGAR</button>
+    <button type="button" class="btn btn-light" (click)="tornar()">TORNAR</button>
   </div>
+</div>
+
+
 </div>

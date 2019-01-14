@@ -39,7 +39,11 @@ Route::post('productes', 'Controller\ProducteController@cartProducts');
 Route::post('categories/save', 'Controller\CategoriaController@saveCategory');
 Route::post('subcategories/save', 'Controller\CategoriaController@saveSubcategory');
 Route::get('categories/delete/{id}', 'Controller\CategoriaController@destroy');
-Route::get('subcategories/delete/{id}', 'Controller\CategoriaController@destroySubcategoria');
+Route::get('productes/index', 'Controller\ProducteController@getAll');
+Route::get('productes/create', 'Controller\ProducteController@create');
+Route::get('productes/delete/{id}', 'Controller\ProducteController@destroy');
+Route::get('productes/{id}', 'Controller\ProducteController@getProducte');
+Route::post('productes/update', 'Controller\ProducteController@saveProducte');
 
 
 

@@ -13,11 +13,11 @@
                <div class="row separacio">
 
          <div class="col-11">
-          <div  class="row separacio">
-              <div class="col-7"><h4>Lets go</h4></div>
-                    <button class="btn btn-warning col-2"> modificar</button>
-                
-                   <button class="btn btn-danger col-2 botoDel" (click)="delete(categoria.id)" >Eliminar</button>
+
+            <div *ngFor="let producte of productes" class="row separacio">
+              <div class="col-7"><h4>{{producte.name}}</h4></div>
+                    <button class="btn btn-warning col-2" [routerLink]="['/admin/productes/edit', producte.id]"> Modificar</button>
+                   <button class="btn btn-danger col-2 botoDel" (click)="delete(producte.id)" >Eliminar</button>
                 </div>
         </div>
                    

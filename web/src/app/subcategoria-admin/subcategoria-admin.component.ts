@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CategoriesAdminService} from "../categories-admin/categories-admin.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-subcategoria-admin',
@@ -9,6 +10,7 @@ import {CategoriesAdminService} from "../categories-admin/categories-admin.servi
 export class SubcategoriaAdminComponent implements OnInit {
 
     constructor(
+        private router: Router,
         private subcategoriaServei: CategoriesAdminService
     ) { }
 
@@ -19,6 +21,10 @@ export class SubcategoriaAdminComponent implements OnInit {
         this.getSubcategories();
     }
 
+
+    tornar(){
+        this.router.navigate(['/admin/menu']);
+    }
 
     delete(id){
         this.errorDeleting = false;

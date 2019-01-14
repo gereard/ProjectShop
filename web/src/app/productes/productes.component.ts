@@ -25,10 +25,11 @@ export class ProductesComponent implements OnInit {
         this.route.params.subscribe(params => {
            this.routeParams = params;
            this.breadcrumb = params;
+            this.producteServei.getProductes(this.routeParams).subscribe(data => {
+                this.productes = data;
+            })
         });
-        this.producteServei.getProductes(this.routeParams).subscribe(data => {
-          this.productes = data;
-        })
+
     }
 
 

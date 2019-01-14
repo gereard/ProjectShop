@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CategoriesAdminService} from "./categories-admin.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-categories-admin',
@@ -9,6 +10,7 @@ import {CategoriesAdminService} from "./categories-admin.service";
 export class CategoriesAdminComponent implements OnInit {
 
   constructor(
+      private router: Router,
       private categoriesServei: CategoriesAdminService
   ) { }
 
@@ -29,8 +31,12 @@ export class CategoriesAdminComponent implements OnInit {
     })
   }
 
+    tornar(){
+          this.router.navigate(['/admin/menu']);
+    }
 
-  getCategories(){
+
+    getCategories(){
       this.categoriesServei.getCategories().subscribe(data => {
         this.categories = data;
       })

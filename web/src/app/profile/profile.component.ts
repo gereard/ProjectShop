@@ -17,6 +17,7 @@ export class ProfileComponent implements OnInit {
 
   user = <any>[];
     errorEditing = false;
+    saveCorrect=false;
   ngOnInit() {
     let storage =  JSON.parse(localStorage.getItem('currentUser'));
       this.auth.getUser(storage.token).subscribe(data =>{
@@ -43,6 +44,7 @@ export class ProfileComponent implements OnInit {
         .pipe(first())
         .subscribe(
             data => {
+              this.saveCorrect=true;
             },
             error => {
                 if(error.error){

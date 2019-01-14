@@ -40,7 +40,7 @@
             <input type="text" id="query" name="query" required="required" class="c-search__query qa-search-box mkt-search-query form-control" placeholder="Busca en PcUvic..." data- autocomplete="off">
          </form>
           <i *ngIf="logged" [routerLink]="['user/profile']" class="fas fa-user fa-3x" style="padding-right: 5px !important;"></i>
-           <a *ngIf="logged">{{user.name}}</a>
+           <a *ngIf="user.role==2">{{user.name}}</a>
       </nav> 
    </div>
    <ul class="navbar-nav-icons" style="margin-right: 0px !important;">

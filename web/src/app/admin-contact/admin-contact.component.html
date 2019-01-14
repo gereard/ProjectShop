@@ -1,0 +1,17 @@
+<div class="contenidorPerfil">
+  <div class="contenidorTitol">
+    <div class="row separacio">
+      <div class="col-4">
+        <button class="btn btn-success" (click)="tornar()">Tornar</button>
+      </div>
+    </div>
+    <h3><b>Missatges</b></h3>
+  </div>
+  <div class="llistaInputs">
+
+    <div *ngFor="let message of messages" class="row separacio">
+      <div class="col-12"><button type="button" class="btn btn-light boto" style="width:100%" [ngStyle]="{'background-color':message.viewed == 1 ? 'red' : '' }" [routerLink]="['/admin/message/', message.id]">
+        Assumpte: {{message.subject}} <i class="fas fa-arrow-circle-right"></i></button></div>
+    </div>
+  </div>
+</div>

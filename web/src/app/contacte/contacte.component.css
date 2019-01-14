@@ -1,0 +1,66 @@
+.contenidorPerfil {
+    /*background-color:blue;*/
+    width: 50%;
+    height:100%;
+    margin: auto;
+    margin-top: 40px;
+}
+.contenidorTitol {
+    /*background-color:blue;*/
+    width: 100%;
+    margin: auto;
+    border-bottom: 1px solid;
+    border-color: #4D94FF;
+}
+.llistaInputs {
+
+    margin: auto;
+    margin-top: 40px;
+}
+.llistaInputs h4{
+    /*text-align: center;*/
+}
+
+.separacio{
+    margin-top: 20px;
+}
+.boto{
+    font-size: large;
+    padding: 20px 20px 20px 20px;
+    margin-top: 2px;
+}
+.marge{
+    margin-left: 15px;
+}
+.botoDel{
+    margin-left: 10px;
+}
+
+
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.blanc{
+    color: #ffffff!important;
+
+}
+
+
+
+.red{
+    color:red;
+    }
+.form-area
+{
+    background-color: #FAFAFA;
+	padding: 10px 40px 60px;
+	margin: 10px 0px 60px;
+	border: 1px solid GREY;
+	}

@@ -1,0 +1,28 @@
+<div class="contenidorPerfil">
+  <div class="row separacio">
+    <div class="col-4">
+      <button class="btn btn-success" (click)="tornar()">Tornar</button>
+    </div>
+  </div>
+  <div class="contenidorTitol">
+    <h3><b>Ordre número {{orderId}}</b></h3>
+  </div>
+
+    <div class="row separacio">
+    <div class="col-4">
+      <h4>Producte</h4>
+    </div>
+    <div class="col-4">
+      <h4>Preu</h4>
+    </div>
+    </div>
+    <div *ngFor="let product of order" class="row separacio">
+      <div class="col-4">
+        <h6>{{product.producte}}</h6>
+      </div>
+      <div class="col-4">
+        <h6>{{product.price}} €</h6>
+      </div>
+    </div>
+
+</div>

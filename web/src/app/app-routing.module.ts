@@ -18,12 +18,20 @@ import {HomeComponent} from "./home/home.component";
 import {ProfileComponent} from "./profile/profile.component";
 import {AuthGuard} from "./auth/auth.guard";
 import {RoleGuard} from "./auth/role.guard";
+import {UsuariComponent} from "./usuari/usuari.component";
+import {OrdersUsuariComponent} from "./orders-usuari/orders-usuari.component";
+import {OrdersDetallComponent} from "./orders-detall/orders-detall.component";
+import {OrdersAdminComponent} from "./orders-admin/orders-admin.component";
+import {QuisomComponent} from "./quisom/quisom.component";
+import {ContacteComponent} from "./contacte/contacte.component";
+import {AdminContactComponent} from "./admin-contact/admin-contact.component";
+import {DetallContactComponent} from "./detall-contact/detall-contact.component";
 
 
 const routes:    Routes = [
     { path: '', component: HomeComponent },
     { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard]},
-    { path: 'profile', component: ProfileComponent},
+    { path: 'user/profile', component: ProfileComponent, canActivate: [AuthGuard]},
     { path: 'login', component: LoginComponent },
     { path: 'categories', component: CategoriaComponent },
     { path: 'categoria/:name', component: SubcategoriesComponent},
@@ -31,18 +39,26 @@ const routes:    Routes = [
     { path: 'productes/:categoria/:subcategoria', component: ProductesComponent},
     { path: 'producte/:name', component: ProducteDetallComponent},
     { path: 'cart', component: CarritoComponent},
-    { path: 'checkout', component: CheckoutComponent},
+    { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard]},
     { path: 'admin/menu', component: CotrolPanelComponent, canActivate: [AuthGuard]},
-    { path: 'admin/categories', component: CategoriesAdminComponent},
-    { path: 'admin/categories/edit/:id', component: EditCategoriaComponent},
-    { path: 'admin/categories/create', component: EditCategoriaComponent},
-    { path: 'admin/subcategories', component: SubcategoriaAdminComponent},
-    { path: 'admin/subcategories/edit/:id', component: EditSubCategoriaComponent},
-    { path: 'admin/subcategories/create', component: EditSubCategoriaComponent},
+    { path: 'admin/categories', component: CategoriesAdminComponent,canActivate: [AuthGuard]},
+    { path: 'admin/categories/edit/:id', component: EditCategoriaComponent, canActivate: [AuthGuard]},
+    { path: 'admin/categories/create', component: EditCategoriaComponent, canActivate: [AuthGuard]},
+    { path: 'admin/subcategories', component: SubcategoriaAdminComponent, canActivate: [AuthGuard]},
+    { path: 'admin/subcategories/edit/:id', component: EditSubCategoriaComponent, canActivate: [AuthGuard]},
+    { path: 'admin/subcategories/create', component: EditSubCategoriaComponent, canActivate: [AuthGuard]},
     { path: 'admin/productes', component: AdminProductesComponent},
     { path: 'admin/productes/create', component: EditProductesComponent},
     { path: 'admin/productes/edit/:id', component: EditProductesComponent},
-
+    { path: 'user/menu', component: UsuariComponent, canActivate: [AuthGuard]},
+    { path: 'user/orders', component: OrdersUsuariComponent, canActivate: [AuthGuard]},
+    { path: 'admin/orders', component: OrdersAdminComponent, canActivate: [AuthGuard]},
+    { path: 'user/orders/:id', component: OrdersDetallComponent, canActivate: [AuthGuard]},
+    { path: 'admin/orders/:id', component: OrdersDetallComponent, canActivate: [AuthGuard]},
+    { path: 'quisom', component: QuisomComponent},
+    { path: 'contacte', component: ContacteComponent},
+    { path: 'admin/messages', component: AdminContactComponent, canActivate: [AuthGuard]},
+    { path: 'admin/message/:id', component: DetallContactComponent, canActivate: [AuthGuard]},
 ];
 
 @NgModule({

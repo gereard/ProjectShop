@@ -44,8 +44,11 @@ Route::get('productes/create', 'Controller\ProducteController@create');
 Route::get('productes/delete/{id}', 'Controller\ProducteController@destroy');
 Route::get('productes/{id}', 'Controller\ProducteController@getProducte');
 Route::post('productes/update', 'Controller\ProducteController@saveProducte');
-
-
-
-
-
+Route::get('subcategories/delete/{id}', 'Controller\CategoriaController@destroySubcategoria');
+Route::get('orders/getAll', 'Controller\OrderController@getAll');
+Route::get('orders/{idUser}', 'Controller\OrderController@indexUser');
+Route::get('order/{idOrder}', 'Controller\OrderController@getOrder');
+Route::post('productes/finalitzarCompra', 'Controller\OrderController@finalitzarCompra');
+Route::post('contact/create', 'Controller\ContactController@create');
+Route::get('contact/get', 'Controller\ContactController@index');
+Route::get('contact/getMessage/{id}', 'Controller\ContactController@getMessage');

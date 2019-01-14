@@ -1,0 +1,19 @@
+<div class="contenidorPerfil">
+  <div class="row separacio">
+    <div class="col-4">
+      <button class="btn btn-success" (click)="tornar()">Tornar</button>
+    </div>
+  </div>
+  <div class="contenidorTitol">
+    <h3><b>Ordres</b></h3>
+  </div>
+  <div class="llistaInputs">
+
+
+    <div *ngFor="let order of orders" class="row separacio">
+      <div class="col-12"><button type="button" class="btn btn-light boto" style="width:100%" [routerLink]="['/admin/orders/', order.idOrder]">
+        Número d'ordre: {{order.idOrder}} <i class="fas fa-arrow-circle-right"></i></button></div>
+    </div>
+
+  </div>
+</div>

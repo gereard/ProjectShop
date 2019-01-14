@@ -17,6 +17,7 @@
 .contenior_producte{
   width: 100%;
   margin-top: 10px;
+  vertical-align: middle;
 }
 
 .contenidor_imatge{
@@ -47,7 +48,7 @@ input{
 }
 .treure_article{
   display: inline-block;
-
+  margin-top: -5px;
 }
 
 .contenior_producte{
@@ -90,6 +91,12 @@ input{
   padding: .875rem .75rem;
 }
 
+.amplada{
+  width: 24px;
+  height: 24px;
+  margin-top: -3px;
+}
+
 .btn-primary:hover{
   color: white;
   background-color: darkblue;
@@ -97,4 +104,10 @@ input{
 
 a{
   color: white;
+}
+
+i{
+  vertical-align: top;
+  margin-top: -5px;
+  margin-left: -4px;
 }

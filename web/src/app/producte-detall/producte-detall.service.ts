@@ -29,4 +29,8 @@ export class ProducteDetallService {
     public getProductes(obj: any): Observable<any> {
         return this.http.post<any>( this.url+'s', obj.ids,httpOptions);
     }
+
+    public finalitzarComprar(obj: any): Observable<any> {
+        return this.http.post<any>( this.url+'s/finalitzarCompra', obj,httpOptions);
+    }
 }

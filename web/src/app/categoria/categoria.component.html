@@ -1,7 +1,9 @@
-
-<div  *ngFor="let categoria of categories">
-    <h2 [routerLink]="['/categoria', categoria.name]">{{categoria.name}}</h2>
-    <ul *ngFor="let subcategoria of categoria.subcategories | slice:0:1" >
-        <li [routerLink]="['/productes/',categoria.name, subcategoria.name]">{{subcategoria.name}}</li>
+<div class="container" style="padding-top: 50px;">
+<div class="container"  *ngFor="let categoria of categories">
+   
+    <button _ngcontent-c3="" class="btn btn-success boto" [routerLink]="['/categoria', categoria.name]" type="button" tabindex="0" ng-reflect-router-link="/admin/categories/">{{categoria.name}}</button>
+    <ul style="padding-top: 10px" *ngFor="let subcategoria of categoria.subcategories" >
+    	<li><button _ngcontent-c3="" class="btn btn-warning boto" [routerLink]="['/productes/',categoria.name, subcategoria.name]" type="button" tabindex="0" ng-reflect-router-link="/admin/categories/">{{subcategoria.name}}</button></li>
     </ul>
+</div>
 </div>

@@ -64,9 +64,9 @@ export class EditProductesComponent implements OnInit {
         this.errorName = false;
         this.errorDescription = false;
         this.errorCategoria = false;
-        this.idCategory = this.idCategory *1;
+        this.producte.idCategory = this.producte.idCategory *1;
 
-        this.idSubcategoria = this.idSubcategoria*1;
+        this.producte.idSubcategoria = this.producte.idSubcategoria*1;
         if(this.producte.name.length < 3){
             this.errorName = true;
             return

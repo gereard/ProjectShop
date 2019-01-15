@@ -12,25 +12,38 @@ export class ProductesComponent implements OnInit {
 
   constructor(
       private route: ActivatedRoute,
-      private producteServei: ProductesService
-  ) {}
+      private producteServei: ProductesService,
+
+  ) {
+
+  }
 
     private sub: any;
     private routeParams : any;
 
+    cerca = false;
     breadcrumb = <any>[];
-
+    producte = "";
     productes = [];
+
     ngOnInit() {
         this.route.params.subscribe(params => {
-           this.routeParams = params;
-           this.breadcrumb = params;
-            this.producteServei.getProductes(this.routeParams).subscribe(data => {
-                this.productes = data;
-            })
+            if(!params || params.producte){
+                this.cerca = true;
+                if(window.location.pathname.includes('cercar')){
+                    var array = window.location.pathname.split('/');
+                    this.producte = array[array.length-1];
+                    this.producteServei.getCerca(this.producte).subscribe(data => {
+                        this.productes = data;
+                    })
+                }
+            }else{
+                this.routeParams = params;
+                this.breadcrumb = params;
+                this.producteServei.getProductes(this.routeParams).subscribe(data => {
+                    this.productes = data;
+                })
+            }
         });
-
     }
-
-
 }

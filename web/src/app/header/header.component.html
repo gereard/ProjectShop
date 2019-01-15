@@ -36,8 +36,8 @@
                </ul>
             </ul>
          </div>
-         <form class="c-search__form js-search-form" method="GET" action="https://www.pccomponentes.com/buscar/">
-            <input type="text" id="query" name="query" required="required" class="c-search__query qa-search-box mkt-search-query form-control" placeholder="Busca en PcUvic..." data- autocomplete="off">
+         <form (submit)="cercar()" class="c-search__form js-search-form" >
+            <input type="text" id="query" name="query" [(ngModel)]="producte" required="required" class="c-search__query qa-search-box mkt-search-query form-control" placeholder="Busca el producte..." data- autocomplete="off">
          </form>
           <i *ngIf="logged" [routerLink]="['user/profile']" class="fas fa-user fa-3x" style="padding-right: 5px !important;"></i>
            <a *ngIf="user.role==2">{{user.name}}</a>

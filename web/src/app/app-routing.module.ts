@@ -37,6 +37,7 @@ const routes:    Routes = [
     { path: 'categoria/:name', component: SubcategoriesComponent},
     { path: 'subcategoria/', component: SubcategoriesComponent},
     { path: 'productes/:categoria/:subcategoria', component: ProductesComponent},
+    { path: 'cercar/:producte', component: ProductesComponent},
     { path: 'producte/:name', component: ProducteDetallComponent},
     { path: 'cart', component: CarritoComponent},
     { path: 'checkout', component: CheckoutComponent, canActivate: [AuthGuard]},

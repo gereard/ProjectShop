@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
     user = <any>[];
     categories = [];
     subcategories = [];
+    producte = "";
 
     ngOnInit() {
       if (localStorage.getItem('currentUser')) {
@@ -42,5 +43,10 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['']);
     location.reload();
   }
+
+  cercar(){
+      this.router.navigate(['/cercar/'+this.producte]);
+  }
+
 
 }

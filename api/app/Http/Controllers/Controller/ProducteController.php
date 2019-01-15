@@ -24,6 +24,12 @@ class ProducteController extends Controller
         return Producte::take(4)->get();
 
     }
+
+
+    public function cercaProducte($cerca)
+    {
+        return Producte::where('name', 'like', '%'.$cerca.'%')->get();
+    }
     public function getAll(){
         return Producte::get();
     }

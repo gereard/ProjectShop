@@ -2,6 +2,8 @@
   <div class="contenidor_ultimes_novetats">
   <div class="contenidorTitol">
     <h3 *ngIf="breadcrumb.categoria"><a  [routerLink]="['/categoria/',breadcrumb.categoria]">{{breadcrumb.categoria}}</a> > <b>{{breadcrumb.subcategoria}}</b></h3>
+    <h3 *ngIf="cerca"><b>{{producte}}</b></h3>
+
   </div>
 
 

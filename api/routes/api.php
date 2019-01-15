@@ -43,6 +43,7 @@ Route::get('productes/index', 'Controller\ProducteController@getAll');
 Route::get('productes/create', 'Controller\ProducteController@create');
 Route::get('productes/delete/{id}', 'Controller\ProducteController@destroy');
 Route::get('productes/{id}', 'Controller\ProducteController@getProducte');
+Route::get('cerca/{cerca}', 'Controller\ProducteController@cercaProducte');
 Route::post('productes/update', 'Controller\ProducteController@saveProducte');
 Route::get('subcategories/delete/{id}', 'Controller\CategoriaController@destroySubcategoria');
 Route::get('orders/getAll', 'Controller\OrderController@getAll');

@@ -14,6 +14,10 @@ export class ProductesService {
         return this.http.get<any>( this.url+'/'+obj.categoria+'/'+obj.subcategoria);
     }
 
+    public getCerca(string): Observable<any> {
+        return this.http.get<any>( 'http://localhost/api/cerca/'+ string);
+    }
+
     public getHomeProducts(): Observable<any> {
         return this.http.get<any>( this.url+'/home');
     }

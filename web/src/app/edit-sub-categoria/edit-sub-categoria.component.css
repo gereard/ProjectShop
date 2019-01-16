@@ -49,5 +49,13 @@
 
 .blanc{
     color: #ffffff!important;
+}
 
+.btn{
+  width:15%;
+  margin-right: 5%;
+}
+
+.b_s{
+  margin-left: 30%;
 }

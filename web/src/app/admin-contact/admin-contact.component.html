@@ -5,7 +5,7 @@
   <div class="llistaInputs">
 
     <div *ngFor="let message of messages" class="row separacio">
-      <div class="col-12"><button type="button" class="btn btn-light boto" style="width:100%" [ngStyle]="{'background-color':message.viewed == 1 ? 'red' : '' }" [routerLink]="['/admin/message/', message.id]">
+      <div class="col-12"><button type="button" class="btn btn-light boto" style="width:100%" [ngStyle]="{'background-color':message.viewed == 1 ? 'rgb(213, 213, 195)' : '' }" [routerLink]="['/admin/message/', message.id]">
         Assumpte: {{message.subject}} <i class="fas fa-arrow-circle-right"></i></button></div>
     </div>
   </div>

@@ -14,7 +14,7 @@
            <a *ngIf="user.role == 1">ADMIN</a>
             <ul class="dropdown-menu">
                <div class="c-main-menu__top-bar">
-                  <h3 class="c-main-menu__name">TODAS LAS SECCIONES</h3>
+                  <h3 class="c-main-menu__name">TOTES LES SECCIONS</h3>
                </div>
                <ul class="c-main-menu__superlist">
                   <li *ngFor="let categoria of categories"  class="c-main-menu__superitem" data-pcc-trigger="toggle-menu-bg" data-pcc-event="hover" data-pcc-group="menu-bg">
@@ -39,7 +39,7 @@
          <form (submit)="cercar()" class="c-search__form js-search-form" >
             <input type="text" id="query" name="query" [(ngModel)]="producte" required="required" class="c-search__query qa-search-box mkt-search-query form-control" placeholder="Busca el producte..." data- autocomplete="off">
          </form>
-          <i *ngIf="logged" [routerLink]="['user/profile']" class="fas fa-user fa-3x" style="padding-right: 5px !important;"></i>
+          <i *ngIf="logged" [routerLink]="['user/menu']" class="fas fa-user fa-3x" style="padding-right: 5px !important;"></i>
            <a *ngIf="user.role==2">{{user.name}}</a>
       </nav> 
    </div>
